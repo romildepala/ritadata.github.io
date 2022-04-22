@@ -358,18 +358,6 @@ input:focus {
   transition: width 0.5s;
 }
 
-.header__menu a::before {
-  position: absolute;
-  content: "";
-  width: 0;
-  transition: width 0.5s;
-  height: 5px;
-  background: #f7d6b7;
-  left: 0;
-  bottom: 4px;
-  z-index: -1;
-}
-
 .header__menu a:hover {
   font-weight: 700;
   color: #2ebfa5;
@@ -1181,7 +1169,7 @@ input:focus {
 }
 
 .user-say__box-description p {
-  color: #7d7e85;
+  color: black;
   font-size: 19px;
   font-style: italic;
   font-weight: 500;

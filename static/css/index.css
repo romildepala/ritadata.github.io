@@ -291,18 +291,6 @@ button:focus, input:focus, img:focus, textarea:focus, input:focus {
   transition: width 500ms;
 }
 
-.header__menu a::before {
-  position: absolute;
-  content: "";
-  width: 0;
-  transition: width 500ms;
-  height: 5px;
-  background: #f7d6b7;
-  left: 0;
-  bottom: 4px;
-  z-index: -1;
-}
-
 .header__menu a:hover {
   font-weight: 700;
   color: #2EBFA5;
@@ -1145,7 +1133,7 @@ button:focus, input:focus, img:focus, textarea:focus, input:focus {
 }
 
 .user-say__box-description p {
-  color: #7d7e85;
+  color: black;
   font-size: 19px;
   font-weight: 500;
 }

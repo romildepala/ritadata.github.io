@@ -1,7 +1,7 @@
 <svg width="256" height="184" viewBox="0 0 256 184" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect width="256" height="184" fill="#E5E5E5"/>
 <rect width="1440" height="5150" transform="translate(-1125 -212)" fill="#FFF8F5"/>
-<rect x="-1125" y="-212" width="1440" height="745" fill="#FFEBE0"/>
+<rect x="-1125" y="-212" width="1440" height="745" fill="#FFF8F5"/>
 <g filter="url(#filter0_dii)">
 <rect x="-198.383" y="-69.5373" width="241.939" height="492.498" rx="40" fill="#F3F5F7"/>
 </g>

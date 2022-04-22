@@ -72,9 +72,13 @@
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
     <link href="static/css/style.min.css" media="screen" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="background: #FFF8F5;">
 <!-- Google Tag Manager (noscript) -->
 <noscript
 >
@@ -89,66 +93,39 @@
 <!-- End Google Tag Manager (noscript) -->
 <!-- Header start -->
 <header>
-    <div class="header">
+    <div class="header" style="padding-top: 36px">
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">
                     <a href="index.html">
                         <img src="static/img/logo_final.svg" alt="rita logo"/>
                     </a>
-                    <a href="index.html" class="site-name">
-                        Rita Personal data
-                    </a>
                 </div>
                 <div class="header__menu">
-                    <ul>
-                        <li><a href="./index.html">Features</a></li>
-                        <li><a href="./about.html" class="active">About Rita</a></li>
+                    <ul style="align-items: center;">
+                        <li><a href="./index.html" style="font-family: 'Inter', sans-serif; font-weight: 400;">How it works?</a></li>
+                        <li><a class="active" href="./about.html" onclick="plausible('About Rita')" style="font-family: 'Inter', sans-serif; font-weight: 400;">About Us</a></li>
+                        <li><a href="./index.html#faq" style="font-family: 'Inter', sans-serif; font-weight: 400;">FAQ</a></li>
                         <li>
                             <a
                                     href="https://ritapersonaldata.medium.com/"
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="noopener noreferrer" style="font-family: 'Inter', sans-serif; font-weight: 400;"
                             >Blog</a
                             >
                         </li>
-                        <li><a href="./faq.html">FAQ</a></li>
+                        <li>
+                          <a href="#" data-toggle="modal" data-target="#GetAppModal" style="color: #037B55; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer; border-width: 1px; border-color: #037B55; border-style: solid; border-radius: 12px; height: 56px; padding-left: 20px; padding-right: 20px; display: flex; align-items: center; justify-content: center;">
+                              <p style="margin-bottom: 0; margin-right: 8px;">Try Rita Now</p>
+                              <img src="static/img/download.svg" alt="">
+                          </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="header__menu-icon">
                     <div class="menu-icon">
-                        <!-- Feather icons sidebar-->
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewbox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-sidebar"
-                        >
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="9" y1="3" x2="9" y2="21"></line>
-                        </svg>
+                        <img src="static/img/li_menu.svg" alt="">
                     </div>
-                </div>
-                <div class="header__button">
-                    <!-- <a
-                      href="https://app.ritapersonaldata.com/join/"
-                      class="button"
-                      target="_blank"
-                    >
-                      Sign Up
-                    </a> -->
-                    <!-- <a
-                      href="https://app.ritapersonaldata.com/signin/"
-                      class="button button--outline"
-                    >
-                      Log In
-                    </a> -->
                 </div>
             </div>
         </div>
@@ -159,322 +136,243 @@
 <!-- Sidebar start -->
 <div class="sidebar">
     <div class="sidebar__inner">
+        <div style="display: flex; width: 100%; justify-content: space-between; align-items: center; padding-left: 24px; padding-right: 10px; margin-bottom: 50px;">
+            <img class="mb-2" src="static/img/sidebar_logo.svg" alt="">
+            <div class="close-sidebar">
+                <img class="mb-2" src="static/img/x.svg">
+            </div>
+
+        </div>
         <div class="sidebar__menu">
             <ul>
-                <li><a href="./index.html">Features</a></li>
-                <li><a href="./about.html" class="active">About Rita</a></li>
+                <li><a href="./index.html">How it works?</a></li>
+                <li><a href="./about.html" class="active" style="font-weight: 600;">About us</a></li>
+                <li><a href="./index.html#faq">FAQ</a></li>
+                <li><a href="https://ritapersonaldata.medium.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
                 <li>
-                    <a
-                            href="https://ritapersonaldata.medium.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                    >Blog</a
-                    >
+                    <a href="#" data-toggle="modal" data-target="#GetAppModal" style="margin-top: 80px; color: #037B55; cursor: pointer; background: #EEF1F4; border-radius: 12px; height: 56px; padding-left: 16px; padding-right: 16px; display: flex; align-items: center; justify-content: center;">
+                        <p style="margin-bottom: 0; margin-right: 8px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 16px;">Download Rita now</p>
+                        <img src="static/img/green_download.svg" alt="">
+                    </a>
                 </li>
-                <li><a href="./faq.html">FAQ</a></li>
             </ul>
         </div>
         <div class="sidebar__button">
-            <!-- <a
-              href="https://app.ritapersonaldata.com/join/"
-              class="button button--outline"
-              target="_blank"
-            >
-              Sign Up
-            </a>
-            <a href="https://app.ritapersonaldata.com/signin/" class="button">
-              Login
-            </a> -->
         </div>
     </div>
 </div>
-<div class="close-sidebar"></div>
 <!-- Sidebar end -->
 
 <section class="our-team">
-    <h2 class="py-5">Our Team</h2>
-    <div class="team-container">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 col-6">
-                    <div class="team-content" data-toggle="modal" data-target="#john-desc">
-                        <div class="team-img">
-                            <img src="static/img/john.png" alt="">
-                        </div>
-                        <h4 style="text-decoration: underline;">John</h4>
-                        <div class="status">Founder</div>
-                    </div>
-                    <!-- John Modal -->
-                    <div class="modal fade" id="john-desc" tabindex="-1" role="dialog" aria-labelledby="john-desc"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="border-bottom">
-                                    <h4 class="modal-title text-center">Description</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>
-                                        John’s passion lies in solving societal challenges through
-                                        disruptive technology. His love for blockchain and privacy-enhancing
-                                        technologies drove him to Rita’s solution. As strategic lead, his
-                                        mind is always on the future of data economy. You’ll catch him being
-                                        in nature in his spare time.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6">
-                    <div class="team-content" data-toggle="modal" data-target="#schena-desc">
-                        <div class="team-img">
-                            <img src="static/img/schena.png" alt="">
-                        </div>
-                        <h4 style="text-decoration: underline;">Schena</h4>
-                        <div class="status">Founder</div>
-                    </div>
-                    <!-- John Modal -->
-                    <div class="modal fade" id="schena-desc" tabindex="-1" role="dialog" aria-labelledby="schena-desc"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="border-bottom">
-                                    <h4 class="modal-title text-center">Description</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p> 
-                                        Guglielmo enjoys making complex things understandable. His expertise
-                                        in consumer applications and user experience is what makes Rita so
-                                        clear and easy to use. Driven by innovation in the data landscape he
-                                        puts his heart into our marketing operations. Next to Rita,
-                                        Guglielmo only makes time for Genoa FC’s games.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6">
-                    <div class="team-content" data-toggle="modal" data-target="#anderson-desc">
-                        <div class="team-img">
-                            <img src="static/img/anderson.png" alt="">
-                        </div>
-                        <h4 style="text-decoration: underline;">Anderson</h4>
-                        <div class="status">Developer</div>
-                    </div>
-                    <!-- John Modal -->
-                    <div class="modal fade" id="anderson-desc" tabindex="-1" role="dialog" aria-labelledby="anderson-desc"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="border-bottom">
-                                    <h4 class="modal-title text-center">Description</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>
-                                        Anderson brings perfectionism and robustness to the table. As
-                                        technical lead with an incredible eye for detail, he makes sure Rita
-                                        users' data is always safe and secure. A master in React Native and
-                                        loves optimising development processes. If you like rock music, get
-                                        in touch with him, he’s excellent with snares.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6">
-                    <div class="team-content" data-toggle="modal" data-target="#kuka-desc">
-                        <div class="team-img">
-                            <img src="static/img/kuka.png" alt="">
-                        </div>
-                        <h4 style="text-decoration: underline;">Kuka</h4>
-                        <div class="status">Developer</div>
-                    </div>
-                    <!-- John Modal -->
-                    <div class="modal fade" id="kuka-desc" tabindex="-1" role="dialog" aria-labelledby="kuka-desc"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="border-bottom">
-                                    <h4 class="modal-title text-center">Description</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p> 
-                                        Kuanysh (Kuka) is a real go-getter. As a backend developer he
-                                        challenges the status quo to find the best way of designing a
-                                        solution. His coding speed is what drives Rita such a fast-paced
-                                        company. Kuka has won many hackathons and awards for his problem
-                                        solving capabilities.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6">
-                    <div class="team-content" data-toggle="modal" data-target="#kiran-desc">
-                        <div class="team-img">
-                            <img src="static/img/kiran.png" alt="">
-                        </div>
-                        <h4 style="text-decoration: underline;">Kiran</h4>
-                        <div class="status">Product Manager</div>
-                    </div>
-                    <!-- John Modal -->
-                    <div class="modal fade" id="kiran-desc" tabindex="-1" role="dialog" aria-labelledby="kiran-desc"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="border-bottom">
-                                    <h4 class="modal-title text-center">Description</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>
-                                        Kiran is Rita’s analytical pillar. His mind is constantly on process optimisation. 
-                                        He loves going through iterations and does so fiercely. 
-                                        His analytical reference frame combined with a profound empathy for the user experience 
-                                        allows for Rita to become a better version of herself every week. 
-                                        Kiran has lived in 6 different cities in the past few years and speaks 4 languages
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6">
-                    <div class="team-content" data-toggle="modal" data-target="#army-desc">
-                        <div class="team-img">
-                            <img src="static/img/army.png" alt="">
-                        </div>
-                        <h4 style="text-decoration: underline;">Army</h4>
-                        <div class="status">Developer</div>
-                    </div>
-                    <!-- John Modal -->
-                    <div class="modal fade" id="army-desc" tabindex="-1" role="dialog" aria-labelledby="army-desc"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="border-bottom">
-                                    <h4 class="modal-title text-center">Description</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>
-                                        For Armandas, (Army) nothing is impossible. No challenge is big
-                                        enough for him. Having started coding at the age of 6, he dances
-                                        through technical problems with swift and accuracy. His advanced
-                                        experience in cryptography supported the development of Rita’s
-                                        privacy-safe solution.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container" style="padding-top: 100px">
+        <div class="row">
+            <div class="col-lg-6 col-xl-6">
+                <h1 class="h1-about-title">We believe that only one person can have control over your data, that’s you.</h1>
+            </div>
+            <div class="col-lg-6 col-xl-6 about-us-rectangles-container">
+                <img src="static/img/about_us_rectangles.png" class="rectangles-image" alt=""> 
             </div>
         </div>
     </div>
-</section>
-
-<section class="about">
-    <h2>Our Story</h2>
-    <div class="container">
-        <div class="row align-items-center about-wrap">
-            <div class="col-lg-6">
-                <div class="lock-img">
-                    <img src="static/img/lock.png" alt="">
-                </div>
+    <h1 class="h1-title" style="margin-left: 10%; margin-right: 10%; padding-top: 200px;">We exist to make data work for everyone.</h1>
+    
+    <div class="container" style="margin-top: 300px; margin-bottom: 100px;">
+        <div class="row">
+            <div class="col-lg-5 col-xl-5" style="display: flex; align-items: center; justify-content: flex-end;">
+                <h1 style="font-family: 'Fraunces', serif; font-weight: 600; color: #037B55; font-size: 84px;">Built with</h1>
             </div>
-            <div class="col-lg-6">
-                <div class="about-text">
-                    We’ve built Rita with a sole purpose: Enabling transparent and user-centric data transactions.
-                    <br><br>
-                    Our inspiration started from digital law, the GDPR in particular. We think that data is an important
-                    part of everyone’s daily life and that’s why everyone should be able to understand it and manage it
-                    with a few simple steps. The decision of what to do with it should be in the users’ hands and based
-                    on a clear understanding of what data is and how it can be used.
-                    <br><br>
-                    Users should be in control of the data they generate and be able to benefit from it’s value. The
-                    GDPR was a step in the right direction, that’s why we’re leveraging it to make data ownership
-                    practical and accessible. As our world moves to a digital and data-driven economy, Rita’s role is to
-                    hand you the keys to your data.
-                    <br><br>
-                    Once you’ve been handed the keys, it’s up to you to manage this powerful resource. With great power
-                    comes great responsibility! But don’t worry, Rita’s here to guide you along the way!
-
-
-                </div>
+            <div class="col-lg-2 col-xl-2" style="display: flex; align-items: center; justify-content: center;">
+                <img src="static/img/Heart.svg" alt="">
+            </div>
+            <div class="col-lg-5 col-xl-5" style="display: flex; align-items: center; justify-content: flex-start;">
+                <h1 style="font-family: 'Fraunces', serif; font-weight: 600; color: #037B55; font-size: 84px;">We are Rita</h1>
             </div>
         </div>
     </div>
-</section>
-
-<section class="our-team" style="background: #FFF8F5;">
-    <h2 class="py-5">Who we are</h2>
 
     <div class="container">
-        <div class="who-wrap">
-            <div class="who-text">
-                We are inspired by DATA
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <img src="static/img/schena.png" alt="" style="width: 100%; cursor: pointer; margin-bottom: 24px;" data-toggle="modal" data-target="#schena-desc">
+                <!-- Schena Modal -->
+                <div class="modal fade" id="schena-desc" tabindex="-1" role="dialog" aria-labelledby="schena-desc"
+                aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered" role="document">
+                   <div class="modal-content">
+                       <div class="border-bottom">
+                           <h4 class="modal-title text-center">Description</h4>
+                       </div>
+                       <div class="modal-body">
+                           <p> 
+                               Guglielmo enjoys making complex things understandable. His expertise
+                               in consumer applications and user experience is what makes Rita so
+                               clear and easy to use. Driven by innovation in the data landscape he
+                               puts his heart into our marketing operations. Next to Rita,
+                               Guglielmo only makes time for Genoa FC’s games.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
             </div>
-        </div>
-        <div class="who-wrap">
-            <div class="who-text">
-                We are courageous about OWNERSHIP
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <img src="static/img/john.png" alt="" style="width: 100%; cursor: pointer; margin-bottom: 24px;" data-toggle="modal" data-target="#john-desc">
+                <!-- John Modal -->
+                <div class="modal fade" id="john-desc" tabindex="-1" role="dialog" aria-labelledby="john-desc"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="border-bottom">
+                                <h4 class="modal-title text-center">Description</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    John’s passion lies in solving societal challenges through
+                                    disruptive technology. His love for blockchain and privacy-enhancing
+                                    technologies drove him to Rita’s solution. As strategic lead, his
+                                    mind is always on the future of data economy. You’ll catch him being
+                                    in nature in his spare time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="who-wrap">
-            <div class="who-text">
-                We are creative for CONTROL
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <img src="static/img/kuka.png" alt="" style="width: 100%; cursor: pointer; margin-bottom: 24px;" data-toggle="modal" data-target="#kuka-desc">
+                <!-- Kuka Modal -->
+                <div class="modal fade" id="kuka-desc" tabindex="-1" role="dialog" aria-labelledby="kuka-desc"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                   <div class="modal-content">
+                       <div class="border-bottom">
+                           <h4 class="modal-title text-center">Description</h4>
+                       </div>
+                       <div class="modal-body">
+                           <p> 
+                               Kuanysh (Kuka) is a real go-getter. As a backend developer he
+                               challenges the status quo to find the best way of designing a
+                               solution. His coding speed is what drives Rita such a fast-paced
+                               company. Kuka has won many hackathons and awards for his problem
+                               solving capabilities.
+                           </p>
+                       </div>
+                   </div>
+                </div>
+           </div>
             </div>
-        </div>
-        <div class="who-wrap">
-            <div class="who-text">
-                We are eager to build RELATIONSHIPS
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <img src="static/img/anderson.png" alt="" style="width: 100%; cursor: pointer; margin-bottom: 24px;" data-toggle="modal" data-target="#anderson-desc">
+                <!-- Anderson Modal -->
+                <div class="modal fade" id="anderson-desc" tabindex="-1" role="dialog" aria-labelledby="anderson-desc"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                   <div class="modal-content">
+                       <div class="border-bottom">
+                           <h4 class="modal-title text-center">Description</h4>
+                       </div>
+                       <div class="modal-body">
+                           <p>
+                               Anderson brings perfectionism and robustness to the table. As
+                               technical lead with an incredible eye for detail, he makes sure Rita
+                               users' data is always safe and secure. A master in React Native and
+                               loves optimising development processes. If you like rock music, get
+                               in touch with him, he’s excellent with snares.
+                           </p>
+                       </div>
+                   </div>
+                </div>
+           </div>
             </div>
-        </div>
-        <div class="who-wrap">
-            <div class="who-text">
-                We are passionate about SOLUTIONS
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <img src="static/img/army.png" alt="" style="width: 100%; cursor: pointer; margin-bottom: 24px;" data-toggle="modal" data-target="#army-desc">
+                <!-- Armandas Modal -->
+                <div class="modal fade" id="army-desc" tabindex="-1" role="dialog" aria-labelledby="army-desc"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                   <div class="modal-content">
+                       <div class="border-bottom">
+                           <h4 class="modal-title text-center">Description</h4>
+                       </div>
+                       <div class="modal-body">
+                           <p>
+                               For Armandas, (Army) nothing is impossible. No challenge is big
+                               enough for him. Having started coding at the age of 6, he dances
+                               through technical problems with swift and accuracy. His advanced
+                               experience in cryptography supported the development of Rita’s
+                               privacy-safe solution.
+                           </p>
+                       </div>
+                   </div>
+                </div>
+           </div>
             </div>
-        </div>
-        <div class="who-wrap">
-            <div class="who-text">
-                We are responsible about the FUTURE
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <img src="static/img/ario.png" alt="" style="width: 100%; cursor: pointer; margin-bottom: 24px;" data-toggle="modal" data-target="#ario-desc">
+                <!-- Ario Modal -->
+                <div class="modal fade" id="ario-desc" tabindex="-1" role="dialog" aria-labelledby="ario-desc"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                   <div class="modal-content">
+                       <div class="border-bottom">
+                           <h4 class="modal-title text-center">Description</h4>
+                       </div>
+                       <div class="modal-body">
+                           <p>
+                                Ario's description
+                           </p>
+                       </div>
+                   </div>
+                </div>
+           </div>
             </div>
         </div>
     </div>
-    <div class="who-btn">
-        <div class="we-are-rita">
-            <span class="btn-img">
-                <img src="static/img/who-btn.png" alt="" style="width: 25px; margin-left: -2px;">
-            </span>
-            <span>WE ARE RITA</span>
+
+    <div class="h1-about-title-container">
+        <h1 class="h1-title">Backed by industry leaders</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
+                <img src="static/img/schena.png" alt="" style="height: 200px; margin-bottom: 24px;">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
+                <img src="static/img/john.png" alt="" style="height: 200px; margin-bottom: 24px;">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
+                <img src="static/img/kuka.png" alt="" style="height: 200px; margin-bottom: 24px;">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
+                <img src="static/img/anderson.png" alt="" style="height: 200px; margin-bottom: 24px;">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
+                <img src="static/img/army.png" alt="" style="height: 200px; margin-bottom: 24px;">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
+                <img src="static/img/ario.png" alt="" style="height: 200px; margin-bottom: 24px;">
+            </div>
         </div>
     </div>
 </section>
 
-
-<section class="our-team">
-    <h2 class="py-5">Vision</h2>
-
-    <div class="vision-text">
-        <div>
-            Rita strongly believes in a democratised data economy, where any internet user can access their data without
-            effort.
-            <br><br>
-            We aim to empower any user, by providing a secure way of understanding and managing personal data.
+<div class="container h1-about-title-container" style="margin-bottom: 200px;">
+    <div class="row">
+        <div class="col-xl-6 col-lg-6">
+            <h1 class="h1-title">Our story</h1>
         </div>
-        <div class="vision-img">
-            <img src="static/img/teer.png" alt="">
+        <div class="col-xl-6 col-lg-6">
+            <p style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px;">
+                <p>Rita’s origin is a passion project. Starting from the simple question: “What do companies really know about us?” After going down a rabit hole of online research we came across a million assumptions and weren’t satisfied. We wanted to see it for ourselves. So we used the GDPR to request data from companies, and visualised it data in a dashboard. We were shocked, and immediately wanted to share it with the world!</p>
+
+                <p>Since, we’ve evolved into a central place where users can view, understand and also control their data. We believe that everyone should be able to do this in a few simple steps. Our aim is to make data work for everyone, by democratising the data lanscape.</p>
+                
+                <p>Rita’s role is to hand you the keys to your data. Once you’ve been handed the keys, it’s up to you to manage this powerful resource. With great power comes great responsibility… But don’t worry, we are here to guide you along the way!</p>
+            </p>
         </div>
     </div>
-
-    <div style="text-align: center; padding: 20px 0">
-        <button class="try-btn" style="background: #03B898; margin-top: 40px;" data-toggle="modal" data-target="#GetAppModal">Try Rita
-            now!
-        </button>
-    </div>
-</section>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="GetAppModal" tabindex="-1" role="dialog" aria-labelledby="GetAppModal"
@@ -549,7 +447,7 @@
                 <li><a href="mailto: info@ritapersonaldata.com"><p>info@ritapersonadata.com</p></a></li>
                 <li><a href="mailto: info@ritapersonaldata.com"><p>Phone: +32495387902
                 </p></a></li>
-                <li><a href="mailto: info@ritapersonaldata.com"><p>Address: Van Trierstraat 40, 2018 Antwerpen</p></a>
+                <li><a href="mailto: info@ritapersonaldata.com"><p>Address: Joop Geesinkweg 901, 1114 AB Amsterdam</p></a>
                 </li>
 
             </ul>
