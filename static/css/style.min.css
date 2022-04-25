@@ -312,7 +312,8 @@ button:focus, img:focus, input:focus {
     vertical-align: middle;
     color: #242A4C;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 .header__logo img {
@@ -1413,6 +1414,10 @@ button:focus, img:focus, input:focus {
         overflow-x: hidden
     }
 
+    .div-to-remove-on-mobile {
+        display: none;
+    }
+
     .new_banner {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -2230,19 +2235,19 @@ button:focus, img:focus, input:focus {
     font-family: 'Fraunces', serif; 
     font-weight: 600; 
     color: #037B55; 
-    font-size: 96px;
+    font-size: 76px;
 }
 
 .h1-about-title {
     font-family: 'Fraunces', serif; 
     font-weight: 600; 
     color: #037B55; 
-    font-size: 82px;
+    font-size: 64px;
 }
 
 .h1-about-title-container {
     margin-top: 364px; 
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .p-text {
@@ -2274,7 +2279,9 @@ button:focus, img:focus, input:focus {
 
 @media (max-width: 575px) {
     .container {
-        max-width: 540px
+        max-width: 540px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
     .h1-title {
         font-size: 64px;
@@ -2326,7 +2333,7 @@ button:focus, img:focus, input:focus {
 
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md {
-        max-width: 1320px
+        max-width: 1720px
     }
 }
 
@@ -4449,11 +4456,11 @@ footer h5{
     bottom: 140px;
 }
 .rectangles-image {
-    width: 90%;
+    width: 60%;
 }
 
 .phone-img{
-    height: 800px;
+    width: 50%;
 }
 .green-circle{
     position: absolute;
