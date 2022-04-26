@@ -38,7 +38,7 @@ ready(function() {
       document.getElementById('cat-2').style.color = "black";
       document.getElementById('desc-3').style.color = "black";
       document.getElementById('cat-3').style.color = "black";
-    document.getElementById('control_image').src = "static/img/phones.png"
+    // document.getElementById('control_image').src = "static/img/phones.png"
   })
 
   document.getElementById('demo_grid2').addEventListener('click', function () {
@@ -52,7 +52,7 @@ ready(function() {
     document.getElementById('desc-3').style.color = "black";
     document.getElementById('cat-3').style.color = "black";
 
-    document.getElementById('control_image').src = "static/img/screen_visualize.svg";
+    // document.getElementById('control_image').src = "static/img/screen_visualize.svg";
   })
 
   document.getElementById('demo_grid3').addEventListener('click', function () {
@@ -65,7 +65,7 @@ ready(function() {
       document.getElementById('cat-1').style.color = "black";
       document.getElementById('desc-2').style.color = "black";
       document.getElementById('cat-2').style.color = "black";
-    document.getElementById('control_image').src = "static/img/screen_control.svg";
+    // document.getElementById('control_image').src = "static/img/screen_control.svg";
 
 
   })
