@@ -4883,3 +4883,9 @@ footer h5{
     margin: auto;
 }
 
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .row {
+        max-width: 1235px;
+    }
+}
+
