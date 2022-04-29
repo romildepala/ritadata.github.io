@@ -2337,6 +2337,13 @@ button:focus, img:focus, input:focus {
     }
 }
 
+@media (min-width: 2500px) {
+    .row-container,
+    .container {
+        max-width: 1235px;
+    }
+}
+
 .get-app-container {
     display: flex; 
     align-items: center; 
