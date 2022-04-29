@@ -2333,7 +2333,14 @@ button:focus, img:focus, input:focus {
 
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md {
-        max-width: 1720px
+        max-width: 1235px
+    }
+}
+
+@media (min-width: 1900px) {
+    .row-container,
+    .container {
+        max-width: 1720px;
     }
 }
 
@@ -4874,5 +4881,11 @@ footer h5{
 .row, .owl-wrap{
     max-width: 1500px;
     margin: auto;
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .row {
+        max-width: 1235px;
+    }
 }
 
