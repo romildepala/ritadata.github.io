@@ -5072,6 +5072,14 @@ footer h5{
     margin-top: 245px; 
     padding-bottom: 35px;
 }
+.d-flex-mobile {
+    display: none !important;
+}
+.container {
+    max-width: none;
+    padding: 0 80px;
+    margin: 0
+}
 
 @media screen and (max-width: 575px) {
     .header__logo a.site-name {
@@ -5113,15 +5121,55 @@ footer h5{
     .as-seen-in-mobile {
         background-color: white;
         display: grid;
+        column-gap: 30px;
+        row-gap: 30px;
+        padding: 24px;
         align-items: center;
         justify-content: space-between;
-        /* padding-right: 80px;
-        padding-left: 80px; */
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    .demo_numbers_mobile {
+        color: white;
+        font-weight: bold;
+        font-size: 34px;
+        font-family: 'Fraunces';
+        background-color: #333E7B;
+        text-align: center;
+        width: 60px!important;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    .demo_section {
+        display: none;
+    }
+    .grid-how-it-works_mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        
+    }
+    .row-how-it-works {
+        justify-content: center;
+        align-items: center;
+    }
+    .d-flex-desktop {
+        display: none !important;
+    }
+    .d-flex-mobile {
+        display: block !important;
+    }
+    .container {
+        padding: 0 24px;
+    }
+
 }
 
+ 
 @media screen and (max-width: 420px) {
     
 }
