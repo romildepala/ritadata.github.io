@@ -5169,9 +5169,10 @@ footer h5{
 
 }
 
- 
 @media screen and (max-width: 420px) {
-    
+    .business-header-buttons {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 360px) {
