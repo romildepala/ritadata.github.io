@@ -4547,6 +4547,8 @@ footer h5{
 }
 .image_demo{
     margin: auto;
+    order: 1;
+    margin-top: 10vh 
 }
 
 .process-wrap{
