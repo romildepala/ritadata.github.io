@@ -4539,7 +4539,7 @@ footer h5{
 }
 @media screen and (max-width:768px) {
     .demo-wrap{
-        height: auto;
+        height: 45vh;
     }
 }
 .new_img{
