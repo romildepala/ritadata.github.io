@@ -26,10 +26,31 @@
     font-size: 1em;
 }
 
+.row > .demo_numbers_extension{
+    color: #037B55;
+    padding: 10px 20px;
+    width: auto;
+    margin: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    background: #F6F8F3;
+    font-family: 'Fraunces';
+}
+
 .demo_category {
     font-family: 'Fraunces';
     font-weight: 400;
     font-size: 34px;
+}
+
+.demo_category_extension {
+    font-family: 'Fraunces';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 15px;
+    margin-top: 15px !important;
 }
 
 .demo_description {
@@ -1316,6 +1337,11 @@ button:focus, img:focus, input:focus {
     background: #0f111f
 }
 
+.banner2_description {
+    padding-right: 140px !important;
+    text-align: left;
+}
+
 @media screen and (max-width: 1199px) {
     .header__logo img {
         width: 30px;
@@ -1551,6 +1577,11 @@ button:focus, img:focus, input:focus {
 
     .counter__item h1 {
         margin-bottom: 10px
+    }
+
+    .row .banner2_description {
+        text-align: center;
+        padding-right: 0 !important;
     }
 }
 
@@ -4467,7 +4498,7 @@ footer h5{
 }
 
 .phone-img{
-    width: 50%;
+    width: 70%;
 }
 .green-circle{
     position: absolute;
