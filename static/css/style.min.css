@@ -26,10 +26,31 @@
     font-size: 1em;
 }
 
+.row > .demo_numbers_extension{
+    color: #037B55;
+    padding: 10px 20px;
+    width: auto;
+    margin: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    background: #F6F8F3;
+    font-family: 'Fraunces';
+}
+
 .demo_category {
     font-family: 'Fraunces';
     font-weight: 400;
     font-size: 34px;
+}
+
+.demo_category_extension {
+    font-family: 'Fraunces';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 15px;
+    margin-top: 15px !important;
 }
 
 .demo_description {
@@ -4467,7 +4488,7 @@ footer h5{
 }
 
 .phone-img{
-    width: 50%;
+    width: 70%;
 }
 .green-circle{
     position: absolute;
