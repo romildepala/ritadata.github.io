@@ -1337,6 +1337,11 @@ button:focus, img:focus, input:focus {
     background: #0f111f
 }
 
+.banner2_description {
+    padding-right: 140px !important;
+    text-align: left;
+}
+
 @media screen and (max-width: 1199px) {
     .header__logo img {
         width: 30px;
@@ -1572,6 +1577,11 @@ button:focus, img:focus, input:focus {
 
     .counter__item h1 {
         margin-bottom: 10px
+    }
+
+    .row .banner2_description {
+        text-align: center;
+        padding-right: 0 !important;
     }
 }
 
