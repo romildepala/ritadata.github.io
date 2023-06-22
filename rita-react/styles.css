@@ -330,6 +330,7 @@ span.section__one__section__text {
     rgba(255, 213, 195, 0.2) 0%,
     rgba(45, 53, 101, 0) 50.97%
   );
+  /* overflow: hidden; */
 }
 
 .get__started__banner__left {
@@ -492,7 +493,48 @@ span.section__one__section__text {
   /* margin-top: 2em; */
 }
 
+/* Tablet styles */
+@media (max-width: 1024px) {
+  /* Modify styles for tablet devices */
+  .banner__container__fluid {
+    margin-top: 2em;
+  }
+  .header__three {
+    font-size: 2em;
+    line-height: 33px;
+  }
+
+  .header__four {
+    font-size: 1.5em;
+    line-height: 33px;
+    width: 90%;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    margin-top: 3em;
+  }
+
+  .text-input {
+    flex: 1;
+    height: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px 0px 0px 8px;
+    outline: none;
+    border: none;
+  }
+}
+
 @media (max-width: 768px) {
+}
+
+/* iPad styles */
+@media (max-width: 768px) {
+  /* Modify styles for iPad devices */
   .banner__container {
     flex-direction: column;
     margin: 0 2em;
@@ -522,7 +564,7 @@ span.section__one__section__text {
   }
 
   .section__text__secondary {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 29px;
   }
 
@@ -537,4 +579,61 @@ span.section__one__section__text {
   .section__five__section__text {
     font-size: 14px;
   }
+}
+
+/* Phone styles */
+@media (min-width: 480px) {
+  /* Modify styles for phone devices */
+  .section__seven__text {
+    font-size: 14px;
+    width: 80%;
+  }
+  .carousel__header {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .get__started__container {
+    padding: 2.5em;
+    overflow: hidden;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .get__started__banner__left {
+    flex: 1;
+    align-items: center;
+  }
+
+  .get__started__banner__right {
+    flex: 1;
+  }
+
+  .get__started__header__three {
+    font-size: 1.5rem !important;
+    line-height: 12px;
+  }
+  .text {
+    font-size: 12px;
+  }
+
+
+
+  .footer__content {
+    padding: 2.5em;
+    overflow: hidden;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 2em 0 2em;
+  }
+
+  .header__left {
+    flex: 1;
+    align-items: center;
+  }
+.footer__section__text {
+}
 }
