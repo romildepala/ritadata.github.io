@@ -1,19 +1,19 @@
 :root {
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
-  --animate-duration: 44s
+  --animate-duration: 44s;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.99) -26.6%, #12162E 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.99) -26.6%, #12162e 100%);
   /* background: linear-gradient(180deg, #000000 -26.6%, #12162E 100%); */
 }
 .navbar__container__fluid {
-  background: #05050B;
+  background: #05050b;
 }
-.navbar__container{
+.navbar__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,22 +21,28 @@ body{
   align-items: center;
 }
 .btn-book-demo {
-  background: #FFDBCB;
+  /* background: #ffdbcb; */
+  background: linear-gradient(111.38deg, #ffd5c3 -0.42%, #ffffff 107.17%);
+  border-radius: 0px 8px 8px 0px;
   box-shadow: inset 0px 4px 4px rgba(255, 213, 195, 0.4);
   border-radius: 12px;
-  color: #242C57;
+  color: #242c57;
   width: 206px;
   height: 61px;
   border-radius: 6px;
   border: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .btn-book-demo:hover {
-  background: #FFDBCB;
+  /* background: #ffdbcb; */
 }
 
 .banner__container__fluid {
-  background: #05060C;
+  background: #05060c;
   margin-bottom: 2em;
 }
 .banner__container {
@@ -45,12 +51,11 @@ body{
   margin: 0 8em;
 }
 
-
-.banner__left{
+.banner__left {
   flex: 0.6;
 }
 
-.banner__right{
+.banner__right {
   flex: 0.4;
 }
 .banner__right > img {
@@ -61,41 +66,45 @@ body{
   align-items: center;
 }
 
-.header__three{
-  font-family: 'Inter';
+.header__three {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 4rem;
   line-height: 90px;
   letter-spacing: -0.8px;
-  color: #FFF2EC;
-  margin-bottom: .5em;
+  color: #fff2ec;
+  margin-bottom: 0.5em;
   width: 90%;
 
   /* line-height: 77px; */
-  background: linear-gradient(102.62deg, #FFFFFF 51.37%, rgba(45, 53, 101, 0.28) 150.61%);
+  background: linear-gradient(
+    102.62deg,
+    #ffffff 51.37%,
+    rgba(45, 53, 101, 0.28) 150.61%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text{
-  font-family: 'Inter';
+.text {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
   font-size: 1rem;
   line-height: 32px;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 80%;
 }
 
 .text_span {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-size: .7rem;
+  font-size: 0.7rem;
   line-height: 32px;
-  color: #FFD5C3;;
+  color: #ffd5c3;
   width: 80%;
 }
 
@@ -111,7 +120,7 @@ body{
   flex: 1;
   height: 100%;
   padding: 10px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 8px 0px 0px 8px;
   outline: none;
   border: none;
@@ -122,11 +131,16 @@ body{
   border: none;
   padding: 10px 20px;
   height: 56px;
-  background: #FFDBCB;
+  background: linear-gradient(111.38deg, #ffd5c3 -0.42%, #ffffff 107.17%);
+  border-radius: 0px 8px 8px 0px;
   box-shadow: inset 0px 4px 4px rgba(255, 213, 195, 0.4);
   border-radius: 0px 8px 8px 0px;
-  color: #242C57;
+  color: #242c57;
   font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .demo-button:hover {
@@ -134,14 +148,14 @@ body{
   border: none;
   padding: 10px 20px;
   height: 56px;
-  background: #FFDBCB;
+  background: #ffdbcb;
   box-shadow: inset 0px 4px 4px rgba(255, 213, 195, 0.4);
   border-radius: 0px 8px 8px 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 600;
 }
 
-.section__container{
+.section__container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -155,47 +169,67 @@ body{
   padding: 10em 0;
 }
 
-.gradient__one { 
-  background: radial-gradient(134.67% 134.67% at 50% 50%, rgba(255, 213, 195, 0.2) 0%, rgba(45, 53, 101, 0) 31.97%);
+.gradient__one {
+  background: radial-gradient(
+    134.67% 134.67% at 50% 50%,
+    rgba(255, 213, 195, 0.2) 0%,
+    rgba(45, 53, 101, 0) 31.97%
+  );
   height: 200px;
   /* padding-top: -3em; */
 }
-.gradient__three{
-  background: radial-gradient(134.67% 134.67% at 50% 50%, rgba(255, 213, 195, 0.2) 0%, rgba(45, 53, 101, 0) 31.97%)
+.gradient__three {
+  background: radial-gradient(
+    134.67% 134.67% at 50% 50%,
+    rgba(255, 213, 195, 0.2) 0%,
+    rgba(45, 53, 101, 0) 31.97%
+  );
 }
 
-.gradient__two{
-  background: linear-gradient(258.62deg, #F7F8F8 40.24%, rgba(247, 248, 248, 0) 163.35%);
+.gradient__two {
+  background: linear-gradient(
+    258.62deg,
+    #f7f8f8 40.24%,
+    rgba(247, 248, 248, 0) 163.35%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient__four{
-  background: linear-gradient(265.51deg, #F7F8F8 46.36%, rgba(247, 248, 248, 0) 132.41%);
+.gradient__four {
+  background: linear-gradient(
+    265.51deg,
+    #f7f8f8 46.36%,
+    rgba(247, 248, 248, 0) 132.41%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .gradient__five {
-  background: radial-gradient(134.67% 134.67% at 50% 50%, rgba(255, 213, 195, 0.2) 0%, rgba(45, 53, 101, 0) 31.97%);
+  background: radial-gradient(
+    134.67% 134.67% at 50% 50%,
+    rgba(255, 213, 195, 0.2) 0%,
+    rgba(45, 53, 101, 0) 31.97%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.header__four{
-  font-family: 'Inter';
+.header__four {
+  font-family: "Inter";
   width: 50%;
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
   text-align: center;
   letter-spacing: -1.12px;
-  color: #F7F8F8
+  color: #f7f8f8;
 }
 
-.header__text{
+.header__text {
   font-size: 29px;
 }
 
@@ -209,29 +243,33 @@ body{
 }
 
 .section__text__gradient > h4 {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
   letter-spacing: -1.12px;
-  background: linear-gradient(94.48deg, #F7F8F8 46.37%, rgba(247, 248, 248, 0) 141.9%);
+  background: linear-gradient(
+    94.48deg,
+    #f7f8f8 46.37%,
+    rgba(247, 248, 248, 0) 141.9%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.section__text{
-  font-family: 'Inter';
+.section__text {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
 .section__text__secondary {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -239,26 +277,26 @@ body{
   display: flex;
   align-items: center;
   text-align: center;
-  color: #B4BCD0;
+  color: #b4bcd0;
   margin-bottom: 5em;
 }
 
 .section__one__section__text {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   display: flex;
   align-items: center;
   text-align: center;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 23px;
   line-height: 56px;
   letter-spacing: -1.12px;
-  color: #F7F8F8
+  color: #f7f8f8;
 }
 
 span.section__one__section__text {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -266,12 +304,12 @@ span.section__one__section__text {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #F7F8F8;
+  color: #f7f8f8;
   margin-bottom: 2em;
 }
 
 .section__five__section__text {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -279,7 +317,7 @@ span.section__one__section__text {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #F7F8F8;
+  color: #f7f8f8;
 }
 
 .get__started__container {
@@ -287,45 +325,52 @@ span.section__one__section__text {
   align-items: center;
   height: 396px;
   padding: 0 12em;
-  background: linear-gradient(to right, rgba(255, 213, 195, 0.2) 0%, rgba(45, 53, 101, 0) 50.97%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 213, 195, 0.2) 0%,
+    rgba(45, 53, 101, 0) 50.97%
+  );
 }
 
-.get__started__banner__left{
+.get__started__banner__left {
   flex: 0.7;
   align-items: center;
 }
 
-.get__started__banner__right{
-  flex: 0.3
+.get__started__banner__right {
+  flex: 0.3;
 }
 
-.get__started__banner__left > h3{
-  font-family: 'Inter';
+.get__started__banner__left > h3 {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 90px;
   letter-spacing: -0.8px;
-  color: #FFF2EC;
-  margin-bottom: .5em;
+  color: #fff2ec;
+  margin-bottom: 0.5em;
   width: 90%;
 
   /* line-height: 77px; */
-  background: linear-gradient(102.62deg, #FFFFFF 51.37%, rgba(45, 53, 101, 0.28) 150.61%);
+  background: linear-gradient(
+    102.62deg,
+    #ffffff 51.37%,
+    rgba(45, 53, 101, 0.28) 150.61%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer__container {
-  background-image: url('assets/footer.svg');
+  background-image: url("assets/footer.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 480px;
   overflow: hidden;
 }
-
 
 .footer__content {
   display: flex;
@@ -337,24 +382,29 @@ span.section__one__section__text {
 
 .btn-access-platform {
   background: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 206px;
   height: 61px;
-  border: 1px solid #FFD5C3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ffd5c3;
   border-radius: 12px;
   margin-top: -8em;
+  text-decoration: none;
 }
 .btn-access-platform:hover {
   background: transparent;
-  color: #FFD5C3;
+  color: #ffd5c3;
   width: 206px;
   height: 61px;
-  border: 1px solid #FFD5C3;
+  border: 1px solid #ffd5c3;
   border-radius: 12px;
   margin-top: -8em;
 }
 .footer__section__text {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -362,16 +412,16 @@ span.section__one__section__text {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #C5CAE7
+  color: #c5cae7;
 }
 .socials__container {
   margin: 3em 0 4em 0;
   display: flex;
-  flex-direction: 'row';
+  flex-direction: "row";
   justify-content: space-between;
 }
 .separator {
-  border: .5px solid #667085;
+  border: 0.5px solid #667085;
   transform: rotate(-180deg);
   width: 83%;
   margin: 0 auto;
@@ -380,29 +430,29 @@ span.section__one__section__text {
   margin: 4em 8em 0 8em;
 }
 
-.get__started__header__three{
-  font-family: 'Inter';
+.get__started__header__three {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 4rem;
   line-height: 90px;
   letter-spacing: -0.8px;
-  color: #FFF2EC;
-  margin-bottom: .5em;
+  color: #fff2ec;
+  margin-bottom: 0.5em;
   width: 90%;
 }
 
 .section__seven__text {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
   display: flex;
   align-items: center;
   text-align: center;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 18px;
   letter-spacing: -1.12px;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 40%;
 }
 
@@ -422,13 +472,13 @@ span.section__one__section__text {
   margin: 2em 0;
 }
 
-.carousel__header{
-  font-family: 'Inter';
+.carousel__header {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
   letter-spacing: -1.12px;
-  color: #F7F8F8;
+  color: #f7f8f8;
   width: 70%;
   margin: 0 auto;
 }
@@ -441,7 +491,6 @@ span.section__one__section__text {
 .carousel__indicator {
   /* margin-top: 2em; */
 }
-
 
 @media (max-width: 768px) {
   .banner__container {
@@ -465,26 +514,26 @@ span.section__one__section__text {
     flex: 1;
   }
 
-  .navbar__container{
+  .navbar__container {
     margin: 2em;
-  };
-  .section__text{
+  }
+  .section__text {
     font-size: 12px;
   }
-  
+
   .section__text__secondary {
     font-size: 16px;
     line-height: 29px;
   }
-  
+
   .section__one__section__text {
     font-size: 14px;
   }
-  
+
   span.section__one__section__text {
     font-size: 14px;
   }
-  
+
   .section__five__section__text {
     font-size: 14px;
   }
