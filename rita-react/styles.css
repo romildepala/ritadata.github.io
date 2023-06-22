@@ -157,8 +157,8 @@ body{
 
 .gradient__one { 
   background: radial-gradient(134.67% 134.67% at 50% 50%, rgba(255, 213, 195, 0.2) 0%, rgba(45, 53, 101, 0) 31.97%);
-  height: 400px;
-  padding-top: -3em;
+  height: 200px;
+  /* padding-top: -3em; */
 }
 .gradient__three{
   background: radial-gradient(134.67% 134.67% at 50% 50%, rgba(255, 213, 195, 0.2) 0%, rgba(45, 53, 101, 0) 31.97%)
@@ -202,6 +202,10 @@ body{
 .section__container__image {
   margin: 2em 0;
   width: 60%;
+}
+
+.section__two {
+  margin-top: 3em;
 }
 
 .section__text__gradient > h4 {
@@ -422,9 +426,11 @@ span.section__one__section__text {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: -1.12px;
   color: #F7F8F8;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .carousel-inner {

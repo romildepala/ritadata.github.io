@@ -57,8 +57,8 @@ const Banner = () => (
   </div>
 );
 
-const HeaderSection = ({title, subtitle, logo}) => (
-  <section id="section1" className="section__container animate__animated animate__fadeIn gradient__one">
+const HeaderSection = ({title, subtitle, logo, gradient__one}) => (
+  <section id="section1" className={`section__container animate__animated animate__fadeIn ${gradient__one}`}>
     <p className="section__one__section__text">
        { title }
     </p>
@@ -165,181 +165,6 @@ const SectionFive = () => {
   );
 };
 
-// const SectionSix = () => {
-//   const sectionRef = useIntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           entry.target.classList.add('animate__animated', 'animate__fadeInDown');
-//         } else {
-//           entry.target.classList.remove('animate__animated', 'animate__fadeInDown');
-//         }
-//       });
-//     },
-//     { rootMargin: '0px', threshold: 0.5 }
-//   );
-
-//   return (
-//     <section className="carousel__container__fluid section__six">
-//       <div className="carousel__container">
-//       <h4 ref={sectionRef} className="carousel__header">
-//         Study your market to make informed decisions
-//       </h4>
-//         <div className="carousel__card">
-//           <img src="assets/cardone.svg" alt="Logo" width="30%" />
-//           <img src="assets/cardtwo.svg" alt="Logo" width="30%" />
-//           <img src="assets/cardthree.svg" alt="Logo" width="30%" />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-
-
-
-const ___SectionSix = () => {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-
-  const sectionRef = useIntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate__animated', 'animate__fadeInDown');
-        } else {
-          entry.target.classList.remove('animate__animated', 'animate__fadeInDown');
-        }
-      });
-    },
-    { rootMargin: '0px', threshold: 0.5 }
-  );
-
-  const indicators = ['cardone', 'cardtwo', 'cardthree']; // Add your image names or URLs here
-
-  const handleIndicatorClick = (index) => {
-    setActiveIndex(index);
-  };
-
-  return (
-    <section className="carousel__container__fluid section__six">
-      <div className="carousel__container">
-        <h4 ref={sectionRef} className="carousel__header">
-          Study your market to make informed decisions
-        </h4>
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-          
-          <div className="carousel-inner">
-            {indicators.map((indicator, index) => (
-              <div
-                key={index}
-                className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
-              >
-                <img src={`assets/${indicator}.svg`} alt="Logo" width="30%" />
-              </div>
-            ))}
-          </div>
-
-          <ol className="carousel-indicators">
-            {indicators.map((_, index) => (
-              <li
-                key={index}
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to={index}
-                className={index === activeIndex ? 'active' : ''}
-                onClick={() => handleIndicatorClick(index)}
-              ></li>
-            ))}
-          </ol>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const __SectionSix = () => {
-  const [activeIndex, setActiveIndex] = React.useState(0); // Set initial active index to 0
-  const items = [
-    'assets/cardone.svg',
-    'assets/cardtwo.svg',
-    'assets/cardthree.svg',
-    'assets/cardfour.svg',
-    'assets/cardfive.svg',
-    'assets/cardtsix.svg',
-  ];
-
-  const handleIndicatorClick = (index) => {
-    if (index < items.length) { // Update the condition to check against the length of the items array
-      setActiveIndex(index);
-    }
-  };
-
-  return (
-    <section className="carousel__container__fluid section__six">
-      <div className="carousel__container">
-        <h4 className="carousel__header">
-          Study your market to make informed decisions
-        </h4>
-        <div
-          id="carouselExampleIndicators"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <ol className="carousel-indicators">
-            {items.map((_, index) => (
-              <li
-                key={index}
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to={index}
-                className={index === activeIndex ? 'active' : ''}
-                onClick={() => handleIndicatorClick(index)}
-              ></li>
-            ))}
-          </ol>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="carousel__card">
-                {items.slice(activeIndex, activeIndex + 3).map((item, index) => (
-                  <img
-                    key={index}
-                    src={item}
-                    alt={`Card ${index + 1}`}
-                    width="30%"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <a
-            className="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </a>
-          <a
-            className="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const SectionSix = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [shouldAnimate, setShouldAnimate] = React.useState(false);
@@ -429,7 +254,7 @@ const SectionSix = () => {
     <section className="carousel__container__fluid section__six">
       <div className="carousel__container">
         <h4 className="carousel__header">
-          {/* Study your market to make informed decisions */}
+          Study your market to make informed decisions
         </h4>
         <div
           id="carouselExampleIndicators"
@@ -534,6 +359,7 @@ function App() {
         title={`"${`We've gained remarkable insights since working with Rita.`}"`}
         subtitle="Stefan Platteau, Head of Analytics at Hellofresh"
         logo={<img src="assets/hello_fresh.svg" alt="Logo" width="10%" />}
+        gradient__one="gradient__one"
       />
       <SectionTwo />
       <SectionThree />
