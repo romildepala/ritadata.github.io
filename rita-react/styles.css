@@ -500,12 +500,12 @@ span.section__one__section__text {
     margin-top: 2em;
   }
   .header__three {
-    font-size: 2em;
+    /* font-size: 2em; */
     line-height: 33px;
   }
 
   .header__four {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     line-height: 33px;
     width: 90%;
   }
@@ -527,9 +527,10 @@ span.section__one__section__text {
     outline: none;
     border: none;
   }
-}
-
-@media (max-width: 768px) {
+/* 
+  .text {
+    font-size: 1rem;
+  } */
 }
 
 /* iPad styles */
@@ -586,14 +587,14 @@ span.section__one__section__text {
   /* Modify styles for phone devices */
   .section__seven__text {
     font-size: 14px;
-    width: 80%;
+    /* width: 80%; */
   }
   .carousel__header {
     font-size: 1.2rem;
     width: 100%;
     text-align: center;
   }
-
+/* 
   .get__started__container {
     padding: 2.5em;
     overflow: hidden;
@@ -617,11 +618,11 @@ span.section__one__section__text {
   }
   .text {
     font-size: 12px;
-  }
+  } */
 
 
 
-  .footer__content {
+  /* .footer__content {
     padding: 2.5em;
     overflow: hidden;
     height: 460px;
@@ -633,7 +634,7 @@ span.section__one__section__text {
   .header__left {
     flex: 1;
     align-items: center;
-  }
+  } */
 .footer__section__text {
 }
 }

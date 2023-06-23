@@ -54,7 +54,7 @@ const Banner = () => (
     <div className="banner__container">
       <div className="banner__left">
         <h3 className="header__three animate__animated animate__fadeInDown">
-          Unlike any data you have seen before.
+          Unlike any data you've seen before.
         </h3>
         <p className="text animate__animated animate__fadeInDown">
           We enable digitally native brands with data to track competitor
@@ -449,7 +449,7 @@ function App() {
         logo=""
       />
       <GetStarted />
-      <SectionSeven />
+      {/* <SectionSeven /> */}
       <FooterSection />
     </div>
   );
