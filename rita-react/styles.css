@@ -493,59 +493,18 @@ span.section__one__section__text {
   /* margin-top: 2em; */
 }
 
-/* Tablet styles */
-@media (max-width: 1024px) {
-  /* Modify styles for tablet devices */
-  .banner__container__fluid {
-    margin-top: 2em;
+@media screen and (max-width: 767px) {
+  /* CSS rules for mobile devices */
+  .navbar__container__fluid {
   }
-  .header__three {
-    /* font-size: 2em; */
-    line-height: 33px;
-  }
-
-  .header__four {
-    /* font-size: 1.5em; */
-    line-height: 33px;
-    width: 90%;
-  }
-
-  .input-container {
-    display: flex;
-    align-items: center;
-    height: 56px;
-    width: 100%;
-    margin-top: 3em;
-  }
-
-  .text-input {
-    flex: 1;
-    height: 100%;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 8px 0px 0px 8px;
-    outline: none;
-    border: none;
-  }
-/* 
-  .text {
-    font-size: 1rem;
-  } */
-}
-
-/* iPad styles */
-@media (max-width: 768px) {
-  /* Modify styles for iPad devices */
   .banner__container {
     flex-direction: column;
     margin: 0 2em;
   }
-
   .header__three {
     font-size: 2em;
     line-height: 33px;
   }
-
   .header__four {
     font-size: 1.5em;
     line-height: 33px;
@@ -556,7 +515,6 @@ span.section__one__section__text {
   .banner__right {
     flex: 1;
   }
-
   .navbar__container {
     margin: 2em;
   }
@@ -567,10 +525,48 @@ span.section__one__section__text {
   .section__text__secondary {
     font-size: 14px;
     line-height: 29px;
+    padding: 0 2.5em;
   }
-
   .section__one__section__text {
     font-size: 14px;
+  }
+  .carousel__header {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: -1.12px;
+    color: #f7f8f8;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .get__started__container {
+    padding: 2.5em;
+    overflow: hidden;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+  }
+  .get__started__banner__left {
+    flex: 1;
+    align-items: center;
+  }
+  .get__started__banner__right {
+    flex: 1;
+  }
+  .get__started__header__three {
+    font-size: 1.5rem !important;
+    line-height: 12px;
+  }
+
+  .footer__content {
+    padding: 2.5em;
+    overflow: hidden;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 2em 0 2em;
   }
 
   span.section__one__section__text {
@@ -582,19 +578,19 @@ span.section__one__section__text {
   }
 }
 
-/* Phone styles */
-@media (min-width: 480px) {
-  /* Modify styles for phone devices */
-  .section__seven__text {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* CSS rules for tablets */
+  .navbar__container__fluid {
+  }
+  .header__three {
+    font-size: 2em;
+    line-height: 33px;
+  }
+  .section__text__secondary {
     font-size: 14px;
-    /* width: 80%; */
+    line-height: 29px;
+    padding: 0 2.5em;
   }
-  .carousel__header {
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
-  }
-/* 
   .get__started__container {
     padding: 2.5em;
     overflow: hidden;
@@ -602,39 +598,42 @@ span.section__one__section__text {
     display: flex;
     flex-direction: column;
   }
-
   .get__started__banner__left {
     flex: 1;
     align-items: center;
   }
-
   .get__started__banner__right {
     flex: 1;
   }
-
   .get__started__header__three {
     font-size: 1.5rem !important;
     line-height: 12px;
   }
-  .text {
-    font-size: 12px;
-  } */
-
-
-
-  /* .footer__content {
-    padding: 2.5em;
-    overflow: hidden;
-    height: 460px;
-    display: flex;
-    flex-direction: column;
-    margin: 1em 2em 0 2em;
-  }
-
-  .header__left {
-    flex: 1;
-    align-items: center;
-  } */
-.footer__section__text {
 }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* CSS rules for small desktops */
+  .navbar__container__fluid {
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  /* CSS rules for medium desktops */
+  .navbar__container__fluid {
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* CSS rules for large desktops */
+  .navbar__container__fluid {
+    /* background: #05050b; */
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  /* CSS rules for high-density screens */
+  .navbar__container__fluid {
+    /* background: orchid; */
+  }
 }
