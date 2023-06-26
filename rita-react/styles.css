@@ -12,6 +12,7 @@ body {
 }
 .navbar__container__fluid {
   background: #05050b;
+  margin-bottom: 2em;
 }
 .navbar__container {
   display: flex;
@@ -20,6 +21,10 @@ body {
   margin: 2em 8em 0 8em;
   align-items: center;
 }
+.navbar__container__button {
+  display: flex;
+  flex-direction: row;
+}
 .btn-book-demo {
   /* background: #ffdbcb; */
   background: linear-gradient(111.38deg, #ffd5c3 -0.42%, #ffffff 107.17%);
@@ -27,14 +32,43 @@ body {
   box-shadow: inset 0px 4px 4px rgba(255, 213, 195, 0.4);
   border-radius: 12px;
   color: #242c57;
-  width: 206px;
+  width: 180px;
   height: 61px;
-  border-radius: 6px;
   border: none;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.btn-mobile-app {
+  /* background: #ffdbcb; */
+  border: 1px solid #FFD5C3;
+  background-color: transparent;
+  border-radius: 12px;
+  color: #ffffff;
+  width: 180px;
+  height: 61px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2em;
+}
+
+.btn-mobile-app:hover {
+  /* background: #ffdbcb; */
+  border: 1px solid #FFD5C3;
+  background-color: transparent;
+  border-radius: 12px;
+  color: #ffffff;
+  width: 180px;
+  height: 61px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2em;
 }
 
 .btn-book-demo:hover {
@@ -43,7 +77,7 @@ body {
 
 .banner__container__fluid {
   background: #05060c;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 .banner__container {
   display: flex;
@@ -129,12 +163,11 @@ body {
 .demo-button {
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 25px;
   height: 56px;
   background: linear-gradient(111.38deg, #ffd5c3 -0.42%, #ffffff 107.17%);
-  border-radius: 0px 8px 8px 0px;
   box-shadow: inset 0px 4px 4px rgba(255, 213, 195, 0.4);
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 8px;
   color: #242c57;
   font-weight: 600;
   text-decoration: none;
@@ -146,11 +179,10 @@ body {
 .demo-button:hover {
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 25px;
   height: 56px;
   background: #ffdbcb;
   box-shadow: inset 0px 4px 4px rgba(255, 213, 195, 0.4);
-  border-radius: 0px 8px 8px 0px;
   color: #ffffff;
   font-weight: 600;
 }
@@ -311,7 +343,7 @@ span.section__one__section__text {
 .section__five__section__text {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 38px;
   display: flex;
@@ -540,7 +572,7 @@ span.section__one__section__text {
     width: 90%;
     margin: 0 auto;
   }
-  
+
   .get__started__container {
     padding: 2.5em;
     overflow: hidden;
@@ -630,8 +662,7 @@ span.section__one__section__text {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-       (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   /* CSS rules for high-density screens */
   .navbar__container__fluid {
     /* background: orchid; */

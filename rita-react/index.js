@@ -15,7 +15,7 @@ const useIntersectionObserver = (callback, options) => {
 
 const TextInputWithButton = () => (
   <div className="input-container animated fadeIn">
-    <input type="text" className="text-input" style={{ width: "220px" }} />
+    {/* <input type="text" className="text-input" style={{ width: "220px" }} /> */}
     <a
       className="demo-button"
       href="https://calendly.com/johnarts/chat?month=2023-06"
@@ -32,19 +32,30 @@ const Header = () => (
       <div className="header__left">
         <a href="#">
           <img
-            src="assets/logo_final.png"
+            src="assets/logo.png"
             alt="Logo"
+            width="80%"
+            height="100%"
             className="d-inline-block align-top"
           />
         </a>
       </div>
-      <a
-        className="btn btn-primary btn-book-demo"
-        href="https://calendly.com/johnarts/chat?month=2023-06"
-        target="_blank"
-      >
-        Book a Demo
-      </a>
+      <div className="navbar__container__button">
+        <a
+          className="btn btn-primary btn-mobile-app"
+          href="https://ritapersonaldata.com"
+          target="_blank"
+        >
+          Book a Demo
+        </a>
+        <a
+          className="btn btn-primary btn-book-demo"
+          href="https://calendly.com/johnarts/chat?month=2023-06"
+          target="_blank"
+        >
+          Book a Demo
+        </a>
+      </div>
     </nav>
   </div>
 );
@@ -63,12 +74,6 @@ const Banner = () => (
           and privacy-first way.
         </p>
         <TextInputWithButton />
-        <span className="text_span animate__animated animate__fadeInDown">
-          *We may contact you to help you get set up.{" "}
-          <a href="" className="text_span">
-            Privacy Policy
-          </a>
-        </span>
       </div>
       <div className="banner__right">
         <video
@@ -224,12 +229,12 @@ const SectionSix = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [shouldAnimate, setShouldAnimate] = React.useState(false);
   const items = [
-    "assets/cardone.svg",
-    "assets/cardtwo.svg",
-    "assets/cardthree.svg",
-    "assets/cardfour.svg",
-    "assets/cardfive.svg",
-    "assets/cardsix.svg",
+    "assets/cardone.png",
+    "assets/cardtwo.png",
+    "assets/cardthree.png",
+    "assets/cardfour.png",
+    "assets/cardfive.png",
+    "assets/cardsix.png",
   ];
 
   const handleNextClick = () => {
@@ -403,9 +408,26 @@ const FooterSection = () => {
           </a>
           <p className="footer__section__text">Your data in your pocket</p>
           <div className="socials__container">
-            <img src="assets/insta.svg" alt="socials" />
-            <img src="assets/twitter.svg" alt="socials" />
-            <img src="assets/linkedin.svg" alt="socials" />
+            <a
+              
+              href=""
+            >
+              <img src="assets/insta.svg" alt="socials" />
+            </a>
+            <a
+              
+              href="https://twitter.com/data_rita"
+              target="_blank"
+            >
+              <img src="assets/twitter.svg" alt="socials" />
+            </a>
+            <a
+              
+              href="https://www.linkedin.com/company/ritapersonaldata/"
+              target="_blank"
+            >
+              <img src="assets/linkedin.svg" alt="socials" />
+            </a>
           </div>
         </div>
         {/* <button className="btn btn-primary btn-access-platform"> */}
@@ -421,7 +443,7 @@ const FooterSection = () => {
       </div>
       <div className="separator"></div>
       <div className="copyright__container">
-        <p className="footer__section__text">&copy; Rita Data BV 2022</p>
+        <p className="footer__section__text">&copy; Rita Data BV 2023</p>
       </div>
     </div>
   );
