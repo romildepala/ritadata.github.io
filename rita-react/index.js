@@ -34,8 +34,8 @@ const Header = () => (
           <img
             src="assets/logo.png"
             alt="Logo"
-            width="80%"
-            height="100%"
+            width="70%"
+            height="20%"
             className="d-inline-block align-top"
           />
         </a>
@@ -399,17 +399,18 @@ const FooterSection = () => {
     <div className="footer__container">
       <div className="footer__content">
         <div className="header__left">
-          <a href="#">
+          <a href="https://ritapersonaldata.com">
             <img
-              src="assets/logo_final.png"
-              alt="Logo"
+              src="assets/footer-logo.png"
+              alt="L'ogo"
+              width="30%"
+              height="25%"
               className="d-inline-block align-top"
             />
           </a>
           <p className="footer__section__text">Your data in your pocket</p>
           <div className="socials__container">
             <a
-              
               href=""
             >
               <img src="assets/insta.svg" alt="socials" />

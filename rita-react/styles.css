@@ -451,7 +451,10 @@ span.section__one__section__text {
   margin: 3em 0 4em 0;
   display: flex;
   flex-direction: "row";
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+.socials__container img {
+  margin-right: 2em;
 }
 .separator {
   border: 0.5px solid #667085;
