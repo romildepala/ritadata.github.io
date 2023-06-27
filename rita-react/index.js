@@ -229,7 +229,7 @@ const SectionSix = () => {
   React.useEffect(() => {
     $(document).ready(function () {
       $(".owl-carousel").owlCarousel({
-        rtl: true,
+        rtl: false,
         loop: true,
         margin: 10,
         nav: true,
@@ -241,13 +241,14 @@ const SectionSix = () => {
             items: 3,
           },
           1000: {
-            items: 3,
+            items: 4,
             loop: true
           },
         },
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         smartSpeed: 1000,
+        autoplay: true
       });
     });
   }, []);
