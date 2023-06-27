@@ -58,10 +58,10 @@ body {
 
 .btn-mobile-app:hover {
   /* background: #ffdbcb; */
-  border: 1px solid #FFD5C3;
+  border: 1px solid #ffffff;
   background-color: transparent;
   border-radius: 12px;
-  color: #ffffff;
+  color: #FFD5C3;
   width: 180px;
   height: 61px;
   text-decoration: none;
@@ -493,11 +493,11 @@ span.section__one__section__text {
 }
 
 .carousel__container__fluid {
-  margin: 3em 0;
+  margin: 3em auto;
 }
 
 .carousel__container {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -515,8 +515,8 @@ span.section__one__section__text {
   font-size: 2rem;
   letter-spacing: -1.12px;
   color: #f7f8f8;
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 2em 0 1em 0;
 }
 
 .carousel-inner {

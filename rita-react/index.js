@@ -42,14 +42,14 @@ const Header = () => (
       </div>
       <div className="navbar__container__button">
         <a
-          className="btn btn-primary btn-mobile-app"
+          className="btn btn-mobile-app"
           href="https://ritapersonaldata.com"
           target="_blank"
         >
-          Book a Demo
+          Rita Mobile App
         </a>
         <a
-          className="btn btn-primary btn-book-demo"
+          className="btn btn-book-demo"
           href="https://calendly.com/johnarts/chat?month=2023-06"
           target="_blank"
         >
@@ -226,88 +226,30 @@ const SectionFive = () => {
 };
 
 const SectionSix = () => {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const [shouldAnimate, setShouldAnimate] = React.useState(false);
-  const items = [
-    "assets/cardone.png",
-    "assets/cardtwo.png",
-    "assets/cardthree.png",
-    "assets/cardfour.png",
-    "assets/cardfive.png",
-    "assets/cardsix.png",
-  ];
-
-  const handleNextClick = () => {
-    setShouldAnimate("animate__slideInRight");
-    setActiveIndex((prevIndex) => {
-      if (prevIndex + 3 >= items.length) {
-        return 0;
-      }
-      return prevIndex + 1;
-    });
-  };
-
-  const handlePreviousClick = () => {
-    setShouldAnimate("animate__slideInLeft");
-    setActiveIndex((prevIndex) => {
-      if (prevIndex === 0) {
-        return items.length - 3;
-      }
-      return prevIndex - 1;
-    });
-  };
-
-  const handleIndicatorClick = (index) => {
-    setShouldAnimate("");
-    setActiveIndex(index);
-  };
-
-  const renderCarouselItems = () => {
-    const endIndex = activeIndex + 3;
-    return (
-      <div className="carousel__card">
-        {items.slice(activeIndex, endIndex).map((item, index) => (
-          <img
-            key={index}
-            src={item}
-            alt={`Card ${index + 1}`}
-            width="32%"
-            className={`animate__animated ${shouldAnimate}`}
-          />
-        ))}
-      </div>
-    );
-  };
-
-  const renderCarouselIndicators = () => {
-    return (
-      <ol className="carousel-indicators">
-        {items.map((_, index) => (
-          <li
-            key={index}
-            className={`indicator ${index === activeIndex ? "active" : ""}`}
-            onClick={() => handleIndicatorClick(index)}
-          />
-        ))}
-      </ol>
-    );
-  };
-
   React.useEffect(() => {
-    const handleAnimationEnd = () => {
-      setShouldAnimate(false);
-    };
-
-    const carouselItems = document.querySelectorAll(".carousel__card img");
-    carouselItems.forEach((item) => {
-      item.addEventListener("animationend", handleAnimationEnd);
-    });
-
-    return () => {
-      carouselItems.forEach((item) => {
-        item.removeEventListener("animationend", handleAnimationEnd);
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        rtl: true,
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 3,
+            loop: true
+          },
+        },
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        smartSpeed: 1000,
       });
-    };
+    });
   }, []);
 
   return (
@@ -316,41 +258,25 @@ const SectionSix = () => {
         <h4 className="carousel__header">
           Study your market to make informed decisions
         </h4>
-        <div
-          id="carouselExampleIndicators"
-          className="carousel slide carousel__indicator"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner">{renderCarouselItems()}</div>
-
-          {renderCarouselIndicators()}
-
-          <a
-            className="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-bs-slide="prev"
-            onClick={handlePreviousClick}
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </a>
-          <a
-            className="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-bs-slide="next"
-            onClick={handleNextClick}
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </a>
+        <div className="owl-carousel owl-theme">
+          <div className="item">
+            <img src="assets/cardone.png" alt="Card One" width="100%" />
+          </div>
+          <div className="item">
+            <img src="assets/cardtwo.png" alt="Card Two" width="100%" />
+          </div>
+          <div className="item">
+            <img src="assets/cardthree.png" alt="Card Three" width="100%" />
+          </div>
+          <div className="item">
+            <img src="assets/cardfour.png" alt="Card Four" width="100%" />
+          </div>
+          <div className="item">
+            <img src="assets/cardfive.png" alt="Card Five" width="100%" />
+          </div>
+          <div className="item">
+            <img src="assets/cardsix.png" alt="Card Six" width="100%" />
+          </div>
         </div>
       </div>
     </section>
@@ -410,20 +336,13 @@ const FooterSection = () => {
           </a>
           <p className="footer__section__text">Your data in your pocket</p>
           <div className="socials__container">
-            <a
-              href=""
-            >
+            <a href="">
               <img src="assets/insta.svg" alt="socials" />
             </a>
-            <a
-              
-              href="https://twitter.com/data_rita"
-              target="_blank"
-            >
+            <a href="https://twitter.com/data_rita" target="_blank">
               <img src="assets/twitter.svg" alt="socials" />
             </a>
             <a
-              
               href="https://www.linkedin.com/company/ritapersonaldata/"
               target="_blank"
             >
