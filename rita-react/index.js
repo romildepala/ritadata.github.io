@@ -121,7 +121,7 @@ const SectionTwo = () => {
         }
       });
     },
-    { rootMargin: "0px", threshold: 0.5 }
+    { rootMargin: "40px", threshold: 0.5 }
   );
 
   return (
@@ -159,7 +159,7 @@ const SectionThree = () => {
         }
       });
     },
-    { rootMargin: "0px", threshold: 0.5 }
+    { rootMargin: "40px", threshold: 0.5 }
   );
 
   return (
@@ -212,7 +212,7 @@ const SectionFive = () => {
         }
       });
     },
-    { rootMargin: "0px", threshold: 0.5 }
+    { rootMargin: "40px", threshold: 0.5 }
   );
 
   return (
