@@ -387,9 +387,9 @@ function App() {
       <SectionFive />
       <SectionSix />
       <HeaderSection
-        title={`"${`We've gained remarkable insights since working with Rita.`}"`}
-        subtitle="Nyssa Packard, Research and Data Lead at Skyscanner"
-        logo=""
+        title={`"${`Rita opens up unprecedented levels of online behavioural insight – it’s a gold mine!`}"`}
+        subtitle="Nyssa Packard, Senior Director of Insights, Skyscanner"
+        logo={<img src="assets/skyscanner.svg" alt="Logo" width="10%" />}
       />
       <GetStarted />
       {/* <SectionSeven /> */}
