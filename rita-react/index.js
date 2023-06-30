@@ -27,7 +27,7 @@ const TextInputWithButton = () => (
 );
 
 const Header = () => (
-  <div className="navbar__container__fluid animate__animated animate__bounce">
+  <div className="navbar__container__fluid animate__animated animate__fadeIn">
     <nav className="navbar__container">
       <div className="header__left">
         <a href="#">
