@@ -101,21 +101,23 @@ const HeaderSection = ({ title, subtitle, logo, gradient__one }) => (
     {logo}
   </section>
 );
-
 const SectionTwo = () => {
+  const [isAnimated, setIsAnimated] = React.useState(false);
   const sectionRef = useIntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isAnimated) {
           entry.target.classList.add(
             "animate__animated",
             "animate__fadeInDown"
           );
-        } else {
+          setIsAnimated(true);
+        } else if (!entry.isIntersecting && isAnimated) {
           entry.target.classList.remove(
             "animate__animated",
             "animate__fadeInDown"
           );
+          setIsAnimated(false);
         }
       });
     },
@@ -138,19 +140,22 @@ const SectionTwo = () => {
 };
 
 const SectionThree = () => {
+  const [isAnimated, setIsAnimated] = React.useState(false);
   const sectionRef = useIntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isAnimated) {
           entry.target.classList.add(
             "animate__animated",
             "animate__fadeInDown"
           );
-        } else {
+          setIsAnimated(true);
+        } else if (!entry.isIntersecting && isAnimated) {
           entry.target.classList.remove(
             "animate__animated",
             "animate__fadeInDown"
           );
+          setIsAnimated(false);
         }
       });
     },
@@ -188,19 +193,22 @@ const SectionFour = () => (
 );
 
 const SectionFive = () => {
+  const [isAnimated, setIsAnimated] = React.useState(false);
   const sectionRef = useIntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isAnimated) {
           entry.target.classList.add(
             "animate__animated",
             "animate__fadeInDown"
           );
-        } else {
+          setIsAnimated(true);
+        } else if (!entry.isIntersecting && isAnimated) {
           entry.target.classList.remove(
             "animate__animated",
             "animate__fadeInDown"
           );
+          setIsAnimated(false);
         }
       });
     },
