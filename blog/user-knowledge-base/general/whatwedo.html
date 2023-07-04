@@ -37,12 +37,7 @@
       href="static/img/logo_final.svg"
     />
     <title>Rita - It's your data, own it.</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -66,7 +61,7 @@
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <link href="../static/css/style.min.css" media="screen" rel="stylesheet" />
+    <link href="../../../static/css/style.min.css" media="screen" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -88,18 +83,22 @@
   </head>
 
   <body class="blog__container" style="background-color: #FFFFFF;">
-    <nav class="py-2" style="background-color: #037B55; margin-bottom: 2em;">
-      <div style="width: 70%; margin: 2em auto;">
-          <div class="row g-0">
-            <div class="col-md-8">
-              <h5 class="card-title" style="color: #FFCFBD; font-size: 2rem; font-family: Inter; font-weight: 400;">User knowledge base</h5>
+    <nav class="py-2" style="background-color: #037B55; margin-bottom: 1em;">
+      <div style="width: 70%; margin: .5em auto;">
+          <a href="#" class="mb-2" style="display: flex; flex-direction: row; align-items: center;">
+            <span class="bi bi-arrow-left" style="color: #ffffff; font-weight: bold; font-size: 1em;"></span>
+            <p class="card-text" style="color: #FFFFFF; font-size: 14px; font-family: 'Inter'; font-weight: 400; margin-left: .5em;">Back to Rita Website</p>
+          </a>
+          <div class="row g-0" style="display: flex; align-items: center; padding: 0 2em;">
+            <div class="col-md-8" style="display: flex; flex-direction: row; align-items: center;">
+              <img src="../../../static/img/blog_logo.png" class="img-fluid rounded-start" alt="General" style="height: 60px;">
+              <h5 class="card-title" style="color: #FFCFBD; font-size: 1.4rem; font-family: Inter; font-weight: 300;">Ita User knowledge base</h5>
             </div>
             <div class="col-md-4">
               <p class="card-text" style="color: #FFFFFF; font-size: 14px; font-family: 'Inter'; font-weight: 400;">Visit our knowledge base for businesses</p>
             </div>
           </div>
       </div>
-
     </nav>
 
     <div class="blog__section">
@@ -107,7 +106,16 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card-body">
-              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">What is Rita's mission and vision?</h5>
+
+              <div class="mb-4" style="display: flex; flex-direction: row; align-items: center; width: 80%;">
+                <p style="color: #222222; font-size: 12px; font-family: 'Inter'; font-weight: 300; padding: 0px; margin: 0px;">All Collections</p>
+                <span class="bi bi-arrow-right-short" style="color: #737373; margin-left: .5em;"></span>
+                <p style="color: #222222; font-size: 12px; font-family: 'Inter'; font-weight: 300; padding: 0px; margin: 0px; margin-left: .5em;">General</p>
+                <span class="bi bi-arrow-right-short" style="color: #737373; margin-left: .5em;"></span>
+                <p style="color: #737373; font-size: 12px; font-family: 'Inter'; font-weight: 300; padding: 0px; margin: 0px; margin-left: .5em;">What does the Rita app do?</p>
+              </div>
+
+              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">What does the Rita App do?</h5>
               <p class="card-text" style="color: #737373; font-size: 14px; font-family: 'Inter'; font-weight: 400;">What are the key features of the Rita app</p>
               <p class="card-text mt-4" style="color: #737373; font-size: 14px; font-family: 'Inter'; font-weight: 400;">Last updated over a week ago</p>
             </div>
@@ -118,7 +126,8 @@
           <div class="col-md-12">
             <div class="card-body">
               <p class="card-text" style="color: #737373; font-size: 14px; font-family: 'Inter'; font-weight: 400;">
-                Our mission at Rita is "To unlock the potential of online data by making the data economy fairer, more accessible and transparent." What do we mean by this?
+                The Rita app consists of three main Features: <span style="font-weight: 500; color: #000;">View, Control, and Earn.</span> <br />
+                Below are the current list of features and capabilities of our app
               </p>
             </div>
             <div class="my-4" style="background-color: rgba(0, 0, 0, 0.05); height: 10px; width: 100%; border-radius: 12px"> </div>
@@ -128,12 +137,13 @@
         <div class="row mt-2">
           <div class="col-md-12">
             <div class="card-body">
-              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">Fairness</h5>
+              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">View</h5>
               <ul style="margin-left: 3em; list-style: square; border-radius: 12;">
                 <li class="mt-2 blog__list__item">
-                  Big Tech are currently sucking up your data for free. We want the current data economy to evolve into one where consumers get a piece of the pie. We want our users to get back some of the value of your data that companies have been slurping up for free.
+                  Know how much is your data worth: The Rita app allows you to see and track your data value within a few minutes after download.
                 </li>
-                <li class="mt-2 blog__list__item">We provide users with the ability to monetise their data</li>
+                <li class="mt-2 blog__list__item">Find out who owns your data, what companies use it for and whether they are trustworthy: We provide full visibility and transparent in how your data is being used.</li>
+                <li class="mt-2 blog__list__item">See the breakdown of ads you've clicked on and time spent on websites</li>
               </ul>
             </div>
           </div>
@@ -142,14 +152,16 @@
         <div class="row mt-2">
           <div class="col-md-12">
             <div class="card-body">
-              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">Accessibility</h5>
+              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">Control</h5>
               <ul style="margin-left: 3em; list-style: square; border-radius: 12;">
                 <li class="mt-2 blog__list__item">
-                  Our name Rita derives from the RIght To Access which is core to the GDPR. It allows for individuals to access the data that companies have about them and gain control. 
+                  Control your data and excercise your GDPR rights: We enable you to easily excercise your GDPR rights with a push of a button by restricting companies you don't know and don't trust (we do the dirty work for you).
+
                 </li>
                 <li class="mt-2 blog__list__item">
-                  We believe that everyone should have access to the new user-centric data ecosystem.
+                  Our control feature is automated and managed using an AI which will send emails on your behalf if you wish to remove your data from specific companies
                 </li>
+                <li class="mt-2 blog__list__item">See the breakdown of ads you've clicked on and time spent on websites</li>
               </ul>
             </div>
           </div>
@@ -158,30 +170,11 @@
         <div class="row mt-2">
           <div class="col-md-12">
             <div class="card-body">
-              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">Transparency</h5>
+              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">Earn</h5>
               <ul style="margin-left: 3em; list-style: square; border-radius: 12;">
-                <li class="mt-2 blog__list__item">
-                  We want users to know what’s going on with their data. Users have the right to know who it’s been shared with and how it’s being used.
-                </li>
-                <li class="mt-2 blog__list__item">
-                  Knowledge is power and transparency is key to being able to make the right decisions.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-2">
-          <div class="col-md-12">
-            <div class="card-body">
-              <h5 class="card-title" style="font-size: 18px; font-family: Inter; font-weight: 500;">Our Vision</h5>
-              <ul style="margin-left: 3em; list-style: square; border-radius: 12;">
-                <li class="mt-2 blog__list__item">
-                  We envision consumers back at the helm. We want you to understand your data and make your own decisions on how your personal data is being used.
-                </li>
-                <li class="mt-2 blog__list__item">
-                  Our Vision is to establish a privacy-first data ecosystem, building greater trust and transparency between consumers and companies, where companies give back what users are owed for their data = An Interoperable data economy without monopolies.
-                </li>
+                <li class="mt-2 blog__list__item">Know how much is your data worth: The Rita app allows you to see and track your data value within a few minutes after download.</li>
+                <li class="mt-2 blog__list__item">Find out who owns your data, what companies use it for and whether they are trustworthy: We provide full visibility and transparent in how your data is being used.</li>
+                <li class="mt-2 blog__list__item">See the breakdown of ads you've clicked on and time spent on websites</li>
               </ul>
             </div>
           </div>

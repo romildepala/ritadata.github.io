@@ -37,12 +37,7 @@
       href="static/img/logo_final.svg"
     />
     <title>Rita - It's your data, own it.</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -61,12 +56,13 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <link href="../static/css/style.min.css" media="screen" rel="stylesheet" />
+    <link href="../../static/css/style.min.css" media="screen" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -88,31 +84,35 @@
   </head>
 
   <body class="blog__container">
-    <nav class="py-2" style="background-color: #037B55; margin-bottom: 2em;">
-      <div style="width: 70%; margin: 2em auto;">
-          <div class="row g-0">
-            <div class="col-md-8">
-              <h5 class="card-title" style="color: #FFCFBD; font-size: 2rem; font-family: Inter; font-weight: 400;">User knowledge base</h5>
+    <nav class="py-2" style="background-color: #037B55; margin-bottom: 1em;">
+      <div style="width: 70%; margin: .5em auto;">
+          <a href="#" class="mb-2" style="display: flex; flex-direction: row; align-items: center;">
+            <span class="bi bi-arrow-left" style="color: #ffffff; font-weight: bold; font-size: 1em;"></span>
+            <p class="card-text" style="color: #FFFFFF; font-size: 14px; font-family: 'Inter'; font-weight: 400; margin-left: .5em;">Back to Rita Website</p>
+          </a>
+          <div class="row g-0" style="display: flex; align-items: center; padding: 0 2em;">
+            <div class="col-md-8" style="display: flex; flex-direction: row; align-items: center;">
+              <img src="../../static/img/blog_logo.png" class="img-fluid rounded-start" alt="General" style="height: 60px;">
+              <h5 class="card-title" style="color: #FFCFBD; font-size: 1.4rem; font-family: Inter; font-weight: 300;">Ita User knowledge base</h5>
             </div>
             <div class="col-md-4">
               <p class="card-text" style="color: #FFFFFF; font-size: 14px; font-family: 'Inter'; font-weight: 400;">Visit our knowledge base for businesses</p>
             </div>
           </div>
       </div>
-
     </nav>
 
     <div class="blog__section">
       <div class="mb-3 py-2" style="width: 100%; background-color: #FFFFFF; border: 1px solid #E6E6E6; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius: 8px;">
         <div class="row">
           <div class="col-md-1 pt-4">
-            <img src="../static/img/messageIcon.png" class="img-fluid rounded-start" alt="General" style="height: 30%;">
+            <img src="../../static/img/messageIcon.png" class="img-fluid rounded-start" alt="General" style="height: 30%; margin-top: 1.5em; margin-left: 1em;">
           </div>
           <div class="col-md-11">
-            <a href="./questions.html" target="_blank">
+            <a href="./general/questions.html" target="_blank">
               <div class="card-body">
-                <h5 class="card-title" style="color: #1A1A1A">General</h5>
-                <p class="card-text" style="color: #1A1A1A">General questions about Rita and what the app does</p>
+                <h5 class="card-title" style="color: #1A1A1A; font-weight: 600; font-size: 14px; font-family: Inter;">General</h5>
+                <p class="card-text" style="color: #1A1A1A; font-weight: 400; font-size: 14px; font-family: Inter;">General questions about Rita and what the app does</p>
                 <p class="card-text"><small class="text-muted">6 articles</small></p>
               </div>
             </a>
@@ -125,14 +125,16 @@
       <div class="mb-3 py-2" style="width: 100%; background-color: #FFFFFF; border: 1px solid #E6E6E6; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius: 8px;">
         <div class="row">
           <div class="col-md-1 pt-4">
-            <img src="../static/img/rewardIcon.png" class="img-fluid rounded-start" alt="Rewards" style="height: 30%;">
+            <img src="../../static/img/rewardIcon.png" class="img-fluid rounded-start" alt="Rewards" style="height: 30%; margin-top: 1.5em; margin-left: 1em;">
           </div>
           <div class="col-md-11">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #1A1A1A">Rewards</h5>
-              <p class="card-text" style="color: #1A1A1A;">Questions about the Rewards we offer</p>
-              <p class="card-text"><small class="text-muted">1 articles</small></p>
-            </div>
+            <a href="./rewards/questions.html" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1A1A1A; font-weight: 600; font-size: 14px; font-family: Inter;">Rewards</h5>
+                <p class="card-text" style="color: #1A1A1A; font-weight: 400; font-size: 14px; font-family: Inter;">Questions about the Rewards we offer</p>
+                <p class="card-text"><small class="text-muted">1 articles</small></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -143,14 +145,16 @@
       <div class="mb-3 py-2" style="width: 100%; background-color: #FFFFFF; border: 1px solid #E6E6E6; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius: 8px;">
         <div class="row">
           <div class="col-md-1 pt-4">
-            <img src="../static/img/paymentIcon.png" class="img-fluid rounded-start" alt="Payment" style="height: 30%;">
+            <img src="../../static/img/paymentIcon.png" class="img-fluid rounded-start" alt="Payment" style="height: 30%; margin-top: 1.5em; margin-left: 1em;">
           </div>
           <div class="col-md-11">
-            <div class="card-body">
-              <h5 class="card-title">Payments</h5>
-              <p class="card-text">Questions about payments within the app and discounts.</p>
-              <p class="card-text"><small class="text-muted">13 articles</small></p>
-            </div>
+            <a href="./payments/questions.html" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1A1A1A; font-weight: 600; font-size: 14px; font-family: Inter;">Payments</h5>
+                <p class="card-text" style="color: #1A1A1A; font-weight: 400; font-size: 14px; font-family: Inter;">Questions about payments within the app and discounts.</p>
+                <p class="card-text"><small class="text-muted">13 articles</small></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -160,14 +164,16 @@
       <div class="mb-3 py-2" style="width: 100%; background-color: #FFFFFF; border: 1px solid #E6E6E6; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius: 8px;">
         <div class="row">
           <div class="col-md-1 pt-4">
-            <img src="../static/img/extensionIcon.png" class="img-fluid rounded-start" alt="Extension" style="height: 30%;">
+            <img src="../../static/img/extensionIcon.png" class="img-fluid rounded-start" alt="Extension" style="height: 30%; margin-top: 1.5em; margin-left: 1em;">
           </div>
           <div class="col-md-11">
-            <div class="card-body">
-              <h5 class="card-title">Rita Web Extension</h5>
-              <p class="card-text">Questions about the Rita Extension</p>
-              <p class="card-text"><small class="text-muted">1 articles</small></p>
-            </div>
+            <a href="./rita-web-extension/questions.html" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1A1A1A; font-weight: 600; font-size: 14px; font-family: Inter;">Rita Web Extension</h5>
+                <p class="card-text" style="color: #1A1A1A; font-weight: 400; font-size: 14px; font-family: Inter;">Questions about the Rita Extension</p>
+                <p class="card-text"><small class="text-muted">1 articles</small></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -177,31 +183,35 @@
       <div class="mb-3" style="width: 100%; background-color: #FFFFFF; border: 1px solid #E6E6E6; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius: 8px;">
         <div class="row">
           <div class="col-md-1 pt-4">
-            <img src="../static/img/accountIcon.png" class="img-fluid rounded-start" alt="account" style="height: 30%;">
+            <img src="../../static/img/accountIcon.png" class="img-fluid rounded-start" alt="account" style="height: 30%; margin-top: 1.5em; margin-left: 1em;">
           </div>
           <div class="col-md-11">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #1A1A1A">Your Rita Account</h5>
-              <p class="card-text" style="color: #1A1A1A">Articles about how to use your account</p>
-              <p class="card-text"><small class="text-muted">6 articles</small></p>
-            </div>
+            <a href="./your-rita-account/questions.html" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1A1A1A; font-weight: 600; font-size: 14px; font-family: Inter;">Your Rita Account</h5>
+                <p class="card-text" style="color: #1A1A1A; font-weight: 400; font-size: 14px; font-family: Inter;">Articles about how to use your account</p>
+                <p class="card-text"><small class="text-muted">6 articles</small></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="blog__section">
-      <div class="mb-3 py-2" style="width: 100%; background-color: #FFFFFF; border: 1px solid #E6E6E6; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius: 8px;">
-        <div class="row p-3">
+      <div class="mb-3" style="width: 100%; background-color: #FFFFFF; border: 1px solid #E6E6E6; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius: 8px;">
+        <div class="row">
           <div class="col-md-1 pt-4">
-            <img src="../static/img/glossaryIcon.png" class="img-fluid rounded-start" alt="Rita glossary" style="height: 30%;">
+            <img src="../../static/img/glossaryIcon.png" class="img-fluid rounded-start" alt="account" style="height: 30%; margin-top: 1.5em; margin-left: 1em;">
           </div>
           <div class="col-md-11">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #1A1A1A">Rita Glossary</h5>
-              <p class="card-text" style="color: #1A1A1A">What do some keywords in the data space mean?</p>
-              <p class="card-text"><small class="text-muted">2 articles</small></p>
-            </div>
+            <a href="./rita-glossary/questions.html" target="_blank">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1A1A1A; font-weight: 600; font-size: 14px; font-family: Inter;">Rita Glossary</h5>
+                <p class="card-text" style="color: #1A1A1A; font-weight: 400; font-size: 14px; font-family: Inter;">What do some keywords in the data space mean?</p>
+                <p class="card-text"><small class="text-muted">2 articles</small></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
