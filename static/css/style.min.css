@@ -4920,3 +4920,18 @@ footer h5{
     }
 }
 
+
+.blog__container {
+    background-color: #FFF8F5;
+    flex: 1;
+}
+
+.blog__section {
+    width: 50%;
+    margin: 1em auto;
+}
+.blog__list__item{
+    color: #1A1A1A; 
+    font-family: 'Inter'; 
+    font-size: 14px;
+}
