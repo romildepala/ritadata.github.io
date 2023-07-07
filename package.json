@@ -3,6 +3,24 @@
   "version": "1.0.0",
   "description": "Landing page for ritapersonaldata.com",
   "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "next build && next export"
+  },
+  "dependencies": {
+    "embla-carousel-autoplay": "^7.0.5",
+    "embla-carousel-react": "^7.0.5",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.5",
+    "next": "13.0.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-modal": "^3.16.1"
+  },
   "devDependencies": {
     "gh-pages": "^5.0.0",
     "htmlhint": "^0.14.1",
@@ -11,9 +29,6 @@
     "prettier": "2.1.2",
     "pretty-quick": "^3.0.2",
     "purify-css": "^1.2.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
