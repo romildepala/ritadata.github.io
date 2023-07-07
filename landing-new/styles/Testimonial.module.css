@@ -1,0 +1,108 @@
+.cardContainer {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+
+  box-shadow: 0px 2px 4px -2px #1a1b1f0f;
+
+  box-shadow: 0px 4px 8px -2px #1a1b1f1a;
+  border-radius: 16px;
+
+  padding: 24px;
+
+  background-image: url(/Parentheses.png);
+  background-repeat: no-repeat;
+  background-size: 33% 40%;
+  background-position: right 15% bottom;
+}
+
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+}
+
+.cardContainer > p {
+  all: unset;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: left;
+  color: #1a1b1f;
+}
+
+.arrowDown {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #ffffff;
+
+  left: 10%;
+  bottom: 2px;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+
+  align-items: center;
+}
+
+.userImage {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+}
+.userName {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName > h4 {
+  all: unset;
+  margin-block: 0px;
+
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.userName > h5 {
+  all: unset;
+  margin-block: 0px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: left;
+  color: #838480;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1339px) {
+  .cardContainer {
+    width: 80%;
+  }
+  .carouselContainer {
+    flex: 0 0 60%;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .cardContainer {
+    width: 70%;
+  }
+  .carouselContainer {
+    flex: 0 0 35%;
+  }
+}

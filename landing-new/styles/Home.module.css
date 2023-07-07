@@ -1,0 +1,238 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+}
+
+.title {
+  margin-block: 0px;
+  font-family: 'Inter';
+  font-size: 64px;
+  text-align: center;
+  color: #037b55;
+  line-height: 80px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin-block: 0px;
+  margin-top: 24px;
+  font-family: 'Inter';
+  font-weight: 400;
+  text-align: center;
+  color: #1a1b1f;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.characteristicsCardContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniTitle {
+  all: unset;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: #1a1b1f;
+  line-height: 32px;
+}
+
+.miniSubTitle {
+  all: unset;
+  font-size: 16px;
+  text-align: center;
+  color: #1a1b1f;
+  line-height: 24px;
+}
+
+.solutionCardContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.descriptionContainer {
+  display: none;
+}
+
+.b2bCard {
+  margin-top: 16px;
+}
+
+.illustrationContainer {
+  position: relative;
+  width: 100%;
+  height: 230vw;
+}
+
+.illustrationTabletContainer {
+  display: none;
+}
+
+.imageWrapper {
+  display: none;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1339px) {
+  .mainContainer {
+    padding: 0px 24px;
+  }
+  .solutionCardContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .imageWrapper {
+    display: block;
+  }
+
+  .illustrationContainer {
+    display: none;
+  }
+
+  .illustrationTabletContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25vw;
+  }
+
+  .b2cCard {
+    width: 49%;
+  }
+  .b2bCard {
+    width: 49%;
+  }
+
+  .title {
+    font-size: 96px;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .characteristicsCardContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .characteristicsCard {
+    width: 32%;
+  }
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+  }
+
+  .textBlock {
+    display: none;
+  }
+
+  .innerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .title {
+    margin-top: 110px;
+  }
+  .mainContainer {
+    padding: 0px 80px;
+  }
+  .solutionCardContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .imageWrapper {
+    display: block;
+    padding: 0px 100px;
+  }
+
+  .illustrationContainer {
+    display: none;
+  }
+
+  .illustrationTabletContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 21vw;
+  }
+
+  .brandContainer {
+    position: relative;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .b2cCard {
+    width: 49%;
+  }
+  .b2bCard {
+    width: 49%;
+  }
+
+  .title {
+    font-size: 96px;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .characteristicsCardContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .characteristicsCard {
+    width: 32%;
+  }
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 21vw;
+  }
+
+  .textBlock {
+    display: none;
+  }
+
+  .innerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    bottom: 3vw;
+  }
+}
