@@ -26,8 +26,7 @@ export const Header = (props) => {
           <button
             className={styles.buttonTitle}
             onClick={() => {
-              // router.push('https://ritapersonaldata.com/business/');
-              window.location.href = '../../about.html'
+              router.push('/about');
             }}>
             Business Solution
           </button>
@@ -41,7 +40,7 @@ export const Header = (props) => {
           <button
             className={styles.buttonTitle}
             onClick={() => {
-              router.push('https://ritapersonaldata.com/about.html');
+              router.push('/about');
             }}>
             About us
           </button>
