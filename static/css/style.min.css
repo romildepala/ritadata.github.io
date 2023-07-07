@@ -2263,10 +2263,10 @@ button:focus, img:focus, input:focus {
 }
 
 .h1-title {
-    font-family: 'Fraunces', serif; 
-    font-weight: 600; 
+    font-family: 'Inter', serif; 
+    font-weight: 500; 
     color: #037B55; 
-    font-size: 76px;
+    font-size: 70px;
 }
 
 .h1-about-title {
@@ -3499,7 +3499,8 @@ button:focus, img:focus, input:focus {
 
     .footer-section {
         padding: 1rem;
-        background-color: #303540;
+        background-color: #242C57;
+        border-radius: 24px 24px 0px 0px;
         color: white;
     }
 
@@ -4579,7 +4580,7 @@ footer h5{
 .image_demo{
     margin: auto;
     order: 1;
-    margin-top: 10vh 
+    /* margin-top: 10vh  */
 }
 
 .process-wrap{
