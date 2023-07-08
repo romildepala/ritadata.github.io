@@ -197,6 +197,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .cardsContainerSecondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .card {
     width: 30%;
   }
@@ -298,6 +303,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .cardsContainerSecondary {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cardSecondary {
+    width: 14%;
+  }
+  
   .card {
     width: 32%;
   }

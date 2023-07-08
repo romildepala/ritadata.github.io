@@ -1,14 +1,11 @@
 import Image from "next/image";
 
 import styles from "../styles/B2C.module.css";
-import { DownloadRitaButton } from "../src/components/layout/DownloadRitaButton";
 import { Layout } from "../src/components/layout/Layout";
-import { Testimonial } from "../src/components/layout/Testimonial";
-import { RitaShowcase } from "../src/components/layout/RitaShowcase";
-import { CharacteristicsCard } from "../src/components/layout/CharacteristicsCard";
-import { FAQ } from "../src/components/layout/FAQ";
+import { IndustyLeadersCard } from "../src/components/layout/IndustryLeadersCard";
+import { TeamsCard } from "../src/components/layout/TeamsCard";
 
-export default function Home() {
+export default function About() {
   return (
     <Layout>
       <div className={styles.mainContainer}>
@@ -53,16 +50,99 @@ export default function Home() {
               We are Rita
             </h1>
           </div>
+
+          <div className={styles.cardsContainerSecondary}>
+            <div className={styles.cardSecondary}>
+              <TeamsCard
+                name="Shena"
+                role="Founder"
+                profile={<Image src="/schena.png" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <TeamsCard
+                name="John"
+                role="Founder"
+                profile={<Image src="/john.png" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <TeamsCard
+                name="Kuka"
+                role="Developer"
+                profile={<Image src="/kuka.png" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <TeamsCard
+                name="Anderson"
+                role="Developer"
+                profile={<Image src="/anderson.png" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <TeamsCard
+                name="Army"
+                role="Developer"
+                profile={<Image src="/army.png" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <TeamsCard
+                name="Ario"
+                role="Designer"
+                profile={<Image src="/ario.png" fill={true} />}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.wrapper}>
+          <h1 className={styles.about__title} style={{ textAlign: "center" }}>
+            Backed by industry leaders
+          </h1>
+
+          <div className={styles.cardsContainerSecondary}>
+            <div className={styles.cardSecondary}>
+              <IndustyLeadersCard
+                name="Roy Vella"
+                role="Chairman & Advisor"
+                profile={<Image src="/roy.jfif" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <IndustyLeadersCard
+                name="Dimitri Sirota"
+                role="Strategic Advisor"
+                profile={<Image src="/dimitri.jfif" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <IndustyLeadersCard
+                name="Debra Farber"
+                role="Strategic Advisor"
+                profile={<Image src="/debra.jfif" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <IndustyLeadersCard
+                name="Jeff Nienaber"
+                role="Strategic Advisor"
+                profile={<Image src="/jeff.jfif" fill={true} />}
+              />
+            </div>
+            <div className={styles.cardSecondary}>
+              <IndustyLeadersCard
+                name="Jeff Nienaber"
+                role="Viivi Lähteenoja"
+                profile={<Image src="/viivi.jfif" fill={true} />}
+              />
+            </div>
+          </div>
         </div>
 
         <div className={styles.solutionContainer}>
-          <div
-            className={[
-              // styles.solutionHeaderContainer,
-              // styles.girlHeaderContainer,
-            ].join(" ")}
-            // style={{ marginTop: 80 }}
-          >
+          <div className={[].join(" ")}>
             <h1 className={[styles.about__title].join(" ")}>Our Story</h1>
             <div style={{ marginTop: 16 }} />
           </div>
@@ -72,14 +152,13 @@ export default function Home() {
               styles.solutionHeaderContainer,
               styles.girlHeaderContainer,
             ].join(" ")}
-            // style={{ marginTop: 80 }}
           >
             <div style={{ marginTop: 16 }} />
             <p
               className={[
                 styles.subtitle__primary,
                 styles.about__anotherSubtitle,
-                styles.subtitle__primary__grey
+                styles.subtitle__primary__grey,
               ].join(" ")}
             >
               Rita’s origin is a passion project. Starting from the simple
@@ -109,7 +188,10 @@ export default function Home() {
                 styles.about__anotherSubtitle,
               ].join(" ")}
             >
-             Rita’s role is to hand you the keys to your data. Once you’ve been handed the keys, it’s up to you to manage this powerful resource. With great power comes great responsibility… But don’t worry, we are here to guide you along the way!
+              Rita’s role is to hand you the keys to your data. Once you’ve been
+              handed the keys, it’s up to you to manage this powerful resource.
+              With great power comes great responsibility… But don’t worry, we
+              are here to guide you along the way!
             </p>
           </div>
         </div>
