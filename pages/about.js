@@ -15,7 +15,7 @@ export default function Home() {
         <div className={styles.aboutHeaderContainer}>
           <div className={styles.someContainer}>
             <h1
-              className={[styles.title, styles.anotherTitle].join(" ")}
+              className={[styles.about__title, styles.anotherTitle].join(" ")}
               style={{ textAlign: "center" }}
             >
               We believe that
@@ -55,7 +55,6 @@ export default function Home() {
           </div>
         </div>
 
-
         <div className={styles.solutionContainer}>
           <div
             className={[
@@ -64,9 +63,7 @@ export default function Home() {
             ].join(" ")}
             // style={{ marginTop: 80 }}
           >
-            <h1 className={[styles.title].join(" ")}>
-              Our Story
-            </h1>
+            <h1 className={[styles.about__title].join(" ")}>Our Story</h1>
             <div style={{ marginTop: 16 }} />
           </div>
 
@@ -75,10 +72,16 @@ export default function Home() {
               styles.solutionHeaderContainer,
               styles.girlHeaderContainer,
             ].join(" ")}
-            style={{ marginTop: 80 }}
+            // style={{ marginTop: 80 }}
           >
             <div style={{ marginTop: 16 }} />
-            <p className={[styles.subtitle__primary, styles.about__anotherSubtitle].join(" ")}>
+            <p
+              className={[
+                styles.subtitle__primary,
+                styles.about__anotherSubtitle,
+                styles.subtitle__primary__grey
+              ].join(" ")}
+            >
               Rita’s origin is a passion project. Starting from the simple
               question: “What do companies really know about us?” After going
               down a rabit hole of online research we came across a million
@@ -88,22 +91,27 @@ export default function Home() {
               immediately wanted to share it with the world!
             </p>
 
-            <p className={[styles.subtitle__primary, styles.about__anotherSubtitle].join(" ")}>
-              Rita’s origin is a passion project. Starting from the simple
-              question: “What do companies really know about us?” After going
-              down a rabit hole of online research we came across a million
-              assumptions and weren’t satisfied. We wanted to see it for
-              ourselves. So we used the GDPR to request data from companies, and
-              visualised it data in a dashboard. We were shocked, and
-              immediately wanted to share it with the world!
+            <p
+              className={[
+                styles.subtitle__primary,
+                styles.about__anotherSubtitle,
+              ].join(" ")}
+            >
+              Since, we’ve evolved into a central place where users can view,
+              understand and also control their data. We believe that everyone
+              should be able to do this in a few simple steps. Our aim is to
+              make data work for everyone, by democratising the data lanscape.
+            </p>
+
+            <p
+              className={[
+                styles.subtitle__primary,
+                styles.about__anotherSubtitle,
+              ].join(" ")}
+            >
+             Rita’s role is to hand you the keys to your data. Once you’ve been handed the keys, it’s up to you to manage this powerful resource. With great power comes great responsibility… But don’t worry, we are here to guide you along the way!
             </p>
           </div>
-        </div>
-
-        <div className={styles.wrapper}>
-          <h1 className={styles.title} style={{ textAlign: "center" }}>
-            Your personal information is always safe.
-          </h1>
         </div>
 
         {/* <div style={{ marginTop: 40, marginBottom: 80 }}> */}
