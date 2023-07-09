@@ -26,7 +26,7 @@ export const Header = (props) => {
           <button
             className={styles.buttonTitle}
             onClick={() => {
-              router.push('../../business');
+              router.push('/business/index.html');
             }}>
             Business Solution
           </button>

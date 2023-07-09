@@ -346,7 +346,7 @@ const Header = (props)=>{
                             /*#__PURE__*/ jsx_runtime_.jsx("button", {
                                 className: (Header_module_default()).buttonTitle,
                                 onClick: ()=>{
-                                    router.push("../../business");
+                                    router.push("/business/index.html");
                                 },
                                 children: "Business Solution"
                             }),
