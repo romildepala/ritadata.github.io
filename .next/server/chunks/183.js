@@ -100,7 +100,11 @@ module.exports = {
 	"links": "Header_links__aTCAR",
 	"logoContainer": "Header_logoContainer__P7SvP",
 	"modalButton": "Header_modalButton__q882I",
-	"modalLinks": "Header_modalLinks__RqEYT"
+	"modalLinks": "Header_modalLinks__RqEYT",
+	"dropdown": "Header_dropdown__RsqGw",
+	"dropdownContent": "Header_dropdownContent__cW_1k",
+	"dropdownOpen": "Header_dropdownOpen__Cnyud",
+	"dropdownButton": "Header_dropdownButton__G3NcW"
 };
 
 
@@ -331,7 +335,11 @@ var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
 
 const Header = (props)=>{
     const [isModalOpen, setIsModalOpen] = (0,external_react_.useState)(false);
+    const [isBlogMenuOpen, setIsBlogMenuOpen] = (0,external_react_.useState)(false); // New state for the blog menu
     const router = (0,router_.useRouter)();
+    const handleBlogMenuClick = ()=>{
+        setIsBlogMenuOpen(!isBlogMenuOpen);
+    };
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {
@@ -382,12 +390,42 @@ const Header = (props)=>{
                                 },
                                 children: "FAQ"
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                                className: (Header_module_default()).buttonTitle,
-                                onClick: ()=>{
-                                    router.push("https://ritapersonaldata.medium.com/");
-                                },
-                                children: "Blog"
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                className: `${(Header_module_default()).dropdown} ${isBlogMenuOpen ? (Header_module_default()).dropdownOpen : ""}`,
+                                onMouseEnter: handleBlogMenuClick,
+                                onMouseLeave: handleBlogMenuClick,
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                        className: (Header_module_default()).buttonTitle,
+                                        children: "Blog"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                        className: (Header_module_default()).dropdownContent,
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                                className: (Header_module_default()).dropdownButton,
+                                                onClick: ()=>{
+                                                    router.push("https://ritapersonaldata.medium.com/");
+                                                },
+                                                children: "Blog"
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                                className: (Header_module_default()).dropdownButton,
+                                                onClick: ()=>{
+                                                    router.push("/blog/user-knowledge-base/index.html");
+                                                },
+                                                children: "User knowledge base"
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                                className: (Header_module_default()).dropdownButton,
+                                                onClick: ()=>{
+                                                    router.push("/blog/business-knowledge-base/index.html");
+                                                },
+                                                children: "Business knowledge base"
+                                            })
+                                        ]
+                                    })
+                                ]
                             }),
                             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                                 className: (Header_module_default()).buttonTitle,

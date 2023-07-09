@@ -63,6 +63,38 @@
   align-items: center;
 }
 
+.dropdown {
+  position: relative;
+  margin-top: 1.2em;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 240px;
+  padding: 0 5px;
+  z-index: 1;
+}
+
+.dropdownOpen .dropdownContent {
+  display: block;
+  margin-top: -1em;
+}
+
+.dropdownButton {
+  all: unset;
+  cursor: pointer;
+  padding: 0px 16px;
+  display: block;
+  font-size: 14px;
+  margin: 2em 0;
+}
+
+.dropdownButton:hover {
+  color: #037b55;
+}
+
 @media screen and (min-width: 1340px) {
   .container {
     margin: 24px 80px;
