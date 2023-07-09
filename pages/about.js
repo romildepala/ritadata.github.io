@@ -103,40 +103,68 @@ export default function About() {
           </h1>
 
           <div className={styles.cardsContainerSecondary}>
-            <div className={styles.cardSecondary}>
+            <a
+              href="https://www.linkedin.com/in/royvella/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <IndustyLeadersCard
                 name="Roy Vella"
                 role="Chairman & Advisor"
                 profile={<Image src="/roy.jfif" fill={true} />}
               />
+            </a>
+            <div className={styles.cardSecondary}>
+              <a
+                href="https://www.linkedin.com/in/dimitrisirota/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IndustyLeadersCard
+                  name="Dimitri Sirota"
+                  role="Strategic Advisor"
+                  profile={<Image src="/dimitri.jfif" fill={true} />}
+                />
+              </a>
             </div>
             <div className={styles.cardSecondary}>
-              <IndustyLeadersCard
-                name="Dimitri Sirota"
-                role="Strategic Advisor"
-                profile={<Image src="/dimitri.jfif" fill={true} />}
-              />
+              <a
+                href="https://www.linkedin.com/in/privacyguru/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IndustyLeadersCard
+                  name="Debra Farber"
+                  role="Strategic Advisor"
+                  profile={<Image src="/debra.jfif" fill={true} />}
+                />
+              </a>
             </div>
             <div className={styles.cardSecondary}>
-              <IndustyLeadersCard
-                name="Debra Farber"
-                role="Strategic Advisor"
-                profile={<Image src="/debra.jfif" fill={true} />}
-              />
+              <a
+                href="https://www.linkedin.com/in/jeffnienaber/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IndustyLeadersCard
+                  name="Jeff Nienaber"
+                  role="Strategic Advisor"
+                  profile={<Image src="/jeff.jfif" fill={true} />}
+                />
+              </a>
             </div>
             <div className={styles.cardSecondary}>
-              <IndustyLeadersCard
-                name="Jeff Nienaber"
-                role="Strategic Advisor"
-                profile={<Image src="/jeff.jfif" fill={true} />}
-              />
-            </div>
-            <div className={styles.cardSecondary}>
-              <IndustyLeadersCard
-                name="Jeff Nienaber"
-                role="Viivi Lähteenoja"
-                profile={<Image src="/viivi.jfif" fill={true} />}
-              />
+              <a
+                href="https://www.linkedin.com/in/viivilahteenoja/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IndustyLeadersCard
+                  name="Viivi Lähteenoja"
+                  role="Strategic Advisor"
+                  profile={<Image src="/viivi.jfif" fill={true} />}
+                />
+              </a>
             </div>
           </div>
         </div>
