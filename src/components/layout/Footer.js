@@ -20,7 +20,7 @@ export const Footer = (props) => {
             <a
               className={styles.a}
               onClick={() => {
-                router.push('https://ritapersonaldata.com/business/');
+                router.push('/business/index.html');
               }}>
               Business Solution
             </a>
@@ -34,7 +34,7 @@ export const Footer = (props) => {
             <a
               className={styles.a}
               onClick={() => {
-                router.push('https://ritapersonaldata.com/about.html');
+                router.push('/about');
               }}>
               About us
             </a>
@@ -51,7 +51,7 @@ export const Footer = (props) => {
             <a
               className={styles.a}
               onClick={() => {
-                router.push('https://ritapersonaldata.com/privacypolicy.html');
+                router.push('/privacy/privacypolicy.html');
               }}>
               Terms of privacy
             </a>

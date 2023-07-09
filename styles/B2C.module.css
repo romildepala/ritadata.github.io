@@ -5,6 +5,12 @@
   padding: 100px 16px;
 }
 
+.privacymainContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 16px;
+}
+
 .title {
   all: unset;
   margin-block: 0px;
@@ -44,7 +50,6 @@
   color: #6e706b;
 }
 
-
 .subtitle__primary {
   all: unset;
   margin-block: 0px;
@@ -56,7 +61,9 @@
   letter-spacing: 0.15000000596046448px;
   text-align: center;
   margin-bottom: 1em;
-  font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .subtitle__primary__grey {
@@ -148,9 +155,29 @@
 .wrapper {
   margin-top: 80px;
 }
+.privacywrapper {
+  margin-top: 100px;
+}
+
+.privacySubHeader {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.listStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 0.1em;
+}
 
 @media screen and (min-width: 744px) and (max-width: 1339px) {
   .mainContainer {
+    padding: 0 24px;
+  }
+  .privacymainContainer {
     padding: 0 24px;
   }
 
@@ -223,6 +250,9 @@
   .mainContainer {
     padding: 0 80px;
   }
+  .privacymainContainer {
+    padding: 0 80px;
+  }
   .someContainer {
     margin-top: 40px;
   }
@@ -262,6 +292,12 @@
 
   .wrapper {
     margin-top: 200px;
+  }
+  .privacywrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0px 200px 0px;
   }
 
   .title {
@@ -313,7 +349,7 @@
   .cardSecondary {
     width: 14%;
   }
-  
+
   .card {
     width: 32%;
   }
@@ -344,6 +380,15 @@
     /* align-items: center; */
   }
 
+  .privacySolutionContainer {
+    margin: 20px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+
   .anotherProblemTitle {
     text-align: left;
     font-size: 64px;
@@ -359,5 +404,8 @@
   }
   .leftSubtitle {
     text-align: left;
+  }
+  .center__subtitle {
+    text-align: center;
   }
 }

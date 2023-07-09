@@ -8,6 +8,7 @@ exports.modules = {
 // Exports
 module.exports = {
 	"mainContainer": "B2C_mainContainer__N_l4B",
+	"privacymainContainer": "B2C_privacymainContainer__6SGrv",
 	"title": "B2C_title__1kVlL",
 	"about__title": "B2C_about__title__JbgDV",
 	"subtitle": "B2C_subtitle__wdNg6",
@@ -26,6 +27,9 @@ module.exports = {
 	"cardsContainer": "B2C_cardsContainer__B_qDj",
 	"card": "B2C_card__9Cj3z",
 	"wrapper": "B2C_wrapper__gtnCP",
+	"privacywrapper": "B2C_privacywrapper__Ps6jm",
+	"privacySubHeader": "B2C_privacySubHeader___u7Bm",
+	"listStyle": "B2C_listStyle__IqHDT",
 	"aboutHeaderContainer": "B2C_aboutHeaderContainer__nxG60",
 	"headerContainer": "B2C_headerContainer__mwmFc",
 	"cardsContainerSecondary": "B2C_cardsContainerSecondary__gs13a",
@@ -37,9 +41,11 @@ module.exports = {
 	"cardSecondary": "B2C_cardSecondary__WtvLK",
 	"girlHeaderContainer": "B2C_girlHeaderContainer__rvzDy",
 	"solutionContainer": "B2C_solutionContainer__Xd6BM",
+	"privacySolutionContainer": "B2C_privacySolutionContainer__xzJZl",
 	"anotherProblemTitle": "B2C_anotherProblemTitle__dVp4B",
 	"anotherSubtitle": "B2C_anotherSubtitle__gCaJE",
-	"about__anotherSubtitle": "B2C_about__anotherSubtitle__CTWDq"
+	"about__anotherSubtitle": "B2C_about__anotherSubtitle__CTWDq",
+	"center__subtitle": "B2C_center__subtitle__7b3xE"
 };
 
 
@@ -633,7 +639,7 @@ const Footer = (props)=>{
                                     /*#__PURE__*/ jsx_runtime_.jsx("a", {
                                         className: (Footer_module_default()).a,
                                         onClick: ()=>{
-                                            router.push("https://ritapersonaldata.com/business/");
+                                            router.push("/business/index.html");
                                         },
                                         children: "Business Solution"
                                     }),
@@ -647,7 +653,7 @@ const Footer = (props)=>{
                                     /*#__PURE__*/ jsx_runtime_.jsx("a", {
                                         className: (Footer_module_default()).a,
                                         onClick: ()=>{
-                                            router.push("https://ritapersonaldata.com/about.html");
+                                            router.push("/about");
                                         },
                                         children: "About us"
                                     }),
@@ -666,7 +672,7 @@ const Footer = (props)=>{
                                     /*#__PURE__*/ jsx_runtime_.jsx("a", {
                                         className: (Footer_module_default()).a,
                                         onClick: ()=>{
-                                            router.push("https://ritapersonaldata.com/privacypolicy.html");
+                                            router.push("/privacy/privacypolicy.html");
                                         },
                                         children: "Terms of privacy"
                                     }),
