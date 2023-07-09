@@ -96,6 +96,7 @@ module.exports = {
 	"buttonIcon": "Header_buttonIcon__f0c5e",
 	"buttonTitle": "Header_buttonTitle__xeKlL",
 	"logo": "Header_logo__6vBZG",
+	"logoText": "Header_logoText__Msq47",
 	"links": "Header_links__aTCAR",
 	"logoContainer": "Header_logoContainer__P7SvP",
 	"modalButton": "Header_modalButton__q882I",
@@ -336,9 +337,19 @@ const Header = (props)=>{
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {
                 className: (Header_module_default()).container,
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                         className: (Header_module_default()).logo,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx(RitaLogoSvg, {})
+                        onClick: ()=>{
+                            router.push("/");
+                        },
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx(RitaLogoSvg, {}),
+                            " ",
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                className: (Header_module_default()).logoText,
+                                children: "Rita for users"
+                            })
+                        ]
                     }),
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                         className: (Header_module_default()).links,

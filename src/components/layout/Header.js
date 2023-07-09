@@ -18,8 +18,10 @@ export const Header = (props) => {
   return (
     <>
       <nav className={styles.container}>
-        <div className={styles.logo}>
-          <RitaLogoSvg />
+        <div className={styles.logo} onClick={() => {
+              router.push('/');
+            }}>
+          <RitaLogoSvg /> <span className={styles.logoText}>Rita for users</span>
         </div>
 
         <div className={styles.links}>
