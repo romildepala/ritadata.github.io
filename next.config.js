@@ -10,6 +10,7 @@ const nextConfig = {
     return {
       '/': { page: '/' },
       '/about': { page: '/about' },
+      '/privacy': { page: '/privacy' },
     };
   },
 };

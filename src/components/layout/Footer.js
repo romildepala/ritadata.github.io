@@ -51,7 +51,7 @@ export const Footer = (props) => {
             <a
               className={styles.a}
               onClick={() => {
-                router.push('/privacy/privacypolicy.html');
+                router.push('/privacy');
               }}>
               Terms of privacy
             </a>

@@ -13,6 +13,7 @@ module.exports = {
 	"about__title": "B2C_about__title__JbgDV",
 	"subtitle": "B2C_subtitle__wdNg6",
 	"subtitle__primary": "B2C_subtitle__primary__hXV2C",
+	"privacy__subtitle__primary": "B2C_privacy__subtitle__primary__fuL1p",
 	"subtitle__primary__grey": "B2C_subtitle__primary__grey__196mV",
 	"h4title": "B2C_h4title__b9Qx3",
 	"h5title": "B2C_h5title__1UukK",
@@ -30,6 +31,10 @@ module.exports = {
 	"privacywrapper": "B2C_privacywrapper__Ps6jm",
 	"privacySubHeader": "B2C_privacySubHeader___u7Bm",
 	"listStyle": "B2C_listStyle__IqHDT",
+	"section__container": "B2C_section__container__uBmbk",
+	"section__wrapper": "B2C_section__wrapper__imSQI",
+	"section__left": "B2C_section__left__gs8TQ",
+	"section__right": "B2C_section__right__zDJhk",
 	"aboutHeaderContainer": "B2C_aboutHeaderContainer__nxG60",
 	"headerContainer": "B2C_headerContainer__mwmFc",
 	"cardsContainerSecondary": "B2C_cardsContainerSecondary__gs13a",
@@ -672,7 +677,7 @@ const Footer = (props)=>{
                                     /*#__PURE__*/ jsx_runtime_.jsx("a", {
                                         className: (Footer_module_default()).a,
                                         onClick: ()=>{
-                                            router.push("/privacy/privacypolicy.html");
+                                            router.push("/privacy");
                                         },
                                         children: "Terms of privacy"
                                     }),

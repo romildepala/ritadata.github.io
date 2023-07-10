@@ -66,6 +66,21 @@
   font-size: 16px;
 }
 
+.privacy__subtitle__primary {
+  all: unset;
+  margin-block: 0px;
+
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15000000596046448px;
+  margin-bottom: 1em;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 .subtitle__primary__grey {
   color: #343a40;
 }
@@ -161,16 +176,36 @@
 
 .privacySubHeader {
   font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-top: 16px 0px;
 }
 
 .listStyle {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  padding-top: 0.1em;
+  padding-top: 0.7em;
+}
+
+.section__container {
+  margin-top: 2em;
+}
+
+.section__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.section__left {
+  flex: 0.48;
+}
+
+.section__right {
+  flex: 0.5;
+  text-align: left;
 }
 
 @media screen and (min-width: 744px) and (max-width: 1339px) {
@@ -296,7 +331,7 @@
   .privacywrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     margin: 80px 0px 200px 0px;
   }
 
@@ -382,11 +417,7 @@
 
   .privacySolutionContainer {
     margin: 20px 0px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* align-items: center; */
+    padding: 0 40px;
   }
 
   .anotherProblemTitle {
@@ -407,5 +438,29 @@
   }
   .center__subtitle {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 744px) {
+  .section__container {
+    margin-top: 2em;
+  }
+
+  .section__wrapper {
+    display: flex;
+    flex-direction: column;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: column;
+    align-items: center; */
+  }
+
+  .section__left {
+    flex: 0.48;
+  }
+
+  .section__right {
+    flex: 0.5;
+    text-align: left;
   }
 }
