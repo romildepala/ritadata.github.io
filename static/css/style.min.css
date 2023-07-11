@@ -35,17 +35,17 @@
     font-weight: bold;
     font-size: 25px;
     background: #F6F8F3;
-    font-family: 'Fraunces';
+    font-family: 'Inter';
 }
 
 .demo_category {
-    font-family: 'Fraunces';
+    font-family: 'Inter';
     font-weight: 400;
     font-size: 34px;
 }
 
 .demo_category_extension {
-    font-family: 'Fraunces';
+    font-family: 'Inter';
     font-weight: 400;
     font-size: 34px;
     line-height: 1;
@@ -331,9 +331,9 @@ button:focus, img:focus, input:focus {
 .header__logo a, .header__logo img {
     display: inline-block;
     vertical-align: middle;
-    color: #242A4C;
+    color: #2f3c44;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Inter', sans-serif;
 }
 
@@ -2263,14 +2263,14 @@ button:focus, img:focus, input:focus {
 }
 
 .h1-title {
-    font-family: 'Fraunces', serif; 
-    font-weight: 600; 
+    font-family: 'Inter', serif; 
+    font-weight: 500; 
     color: #037B55; 
     font-size: 76px;
 }
 
 .h1-about-title {
-    font-family: 'Fraunces', serif; 
+    font-family: 'Inter', serif; 
     font-weight: 600; 
     color: #037B55; 
     font-size: 64px;
@@ -3540,7 +3540,7 @@ button:focus, img:focus, input:focus {
         padding-top: 5px;
         font-size: 24px;
         font-weight: 600;
-        font-family: 'Fraunces';
+        font-family: 'Inter';
     }
 
     .footer-logo {
@@ -3747,7 +3747,7 @@ button:focus, img:focus, input:focus {
         padding-top: 5px;
         font-size: 24px;
         font-weight: 600;
-        font-family: 'Fraunces';
+        font-family: 'Inter';
     }
 
     .footer-section p {
