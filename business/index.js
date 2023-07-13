@@ -94,7 +94,10 @@ const HeaderSection = ({ title, subtitle, logo, gradient__one }) => (
     id="section1"
     className={`section__container animate__animated animate__fadeIn ${gradient__one}`}
   >
-    <p className="section__one__section__text">{title}</p>
+    {/* <p className="section__one__section__text">{title}</p> */}
+    <h4 className="header__four">
+      {title}
+    </h4>
     <span className="section__text section__one__section__text">
       {subtitle}
     </span>
@@ -250,13 +253,13 @@ const SectionSix = () => {
           },
           1000: {
             items: 4,
-            loop: true
+            loop: true,
           },
         },
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
+        animateOut: "fadeOut",
+        animateIn: "fadeIn",
         smartSpeed: 1000,
-        autoplay: true
+        autoplay: true,
       });
     });
   }, []);
@@ -386,7 +389,7 @@ function App() {
       <HeaderSection
         title={`"${`We've gained remarkable insights since working with Rita.`}"`}
         subtitle="Stefan Platteau, Head of Analytics at Hellofresh"
-        logo={<img src="assets/hello_fresh.svg" alt="Logo" width="10%" />}
+        logo={<img src="assets/hello_fresh.svg" alt="Logo" width="100%" className="headers__section__logo" />}
         gradient__one="gradient__one"
       />
       <SectionTwo />

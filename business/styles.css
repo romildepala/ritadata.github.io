@@ -43,7 +43,7 @@ body {
 
 .btn-mobile-app {
   /* background: #ffdbcb; */
-  border: 1px solid #FFD5C3;
+  border: 1px solid #ffd5c3;
   background-color: transparent;
   border-radius: 12px;
   color: #ffffff;
@@ -61,7 +61,7 @@ body {
   border: 1px solid #ffffff;
   background-color: transparent;
   border-radius: 12px;
-  color: #FFD5C3;
+  color: #ffd5c3;
   width: 180px;
   height: 61px;
   text-decoration: none;
@@ -252,10 +252,10 @@ body {
 
 .header__four {
   font-family: "Inter";
-  width: 50%;
+  width: 70%;
   font-style: normal;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   letter-spacing: -1.12px;
   color: #f7f8f8;
@@ -268,6 +268,10 @@ body {
 .section__container__image {
   margin: 2em 0;
   width: 60%;
+}
+
+.headers__section__logo {
+  width: 184px;
 }
 
 .section__two {
@@ -316,11 +320,11 @@ body {
 .section__one__section__text {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
   display: flex;
   align-items: center;
   text-align: center;
   font-family: "Inter";
+  font-weight: 500;
   font-size: 20px;
   /* line-height: 48px; */
   letter-spacing: -1.12px;
@@ -331,13 +335,13 @@ span.section__one__section__text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px !important;
   line-height: 38px;
   display: flex;
   align-items: center;
   text-align: center;
   color: #f7f8f8;
-  margin-bottom: 2em;
+  margin: 1em 0 2em 0;
 }
 
 .section__five__section__text {
@@ -491,7 +495,6 @@ span.section__one__section__text {
   color: #ffffff;
   width: 40%;
 }
-
 
 .carousel__container__fluid {
   margin: 3em auto;
