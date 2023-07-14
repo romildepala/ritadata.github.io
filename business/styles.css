@@ -317,6 +317,9 @@ body {
   margin-bottom: 5em;
 }
 
+.section__text__on__mobile {
+  margin-top: 1em !important;
+}
 .section__one__section__text {
   font-family: "Inter";
   font-style: normal;
@@ -615,6 +618,7 @@ span.section__one__section__text {
   .section__five__section__text {
     font-size: 14px;
   }
+  
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -648,6 +652,36 @@ span.section__one__section__text {
     font-size: 1.5rem !important;
     line-height: 12px;
   }
+
+  .btn-mobile-app {
+    width: 144px;
+    height: 51px;
+    font-size: 12px;
+    display: flex;
+  }
+
+  .hidden__on__mobile {
+    width: 144px;
+    height: 51px;
+    font-size: 12px;
+    display: flex;
+  }
+
+  .demo-button {
+    height: 51px;
+    font-size: 13px;
+  }
+
+  .d-inline-block {
+    height: 40px;
+    width: 280px;
+  }
+  .banner__right > img {
+    height: 380px;
+  }
+  .section__text__on__mobile {
+    margin-top: 3em !important;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -673,5 +707,68 @@ span.section__one__section__text {
   /* CSS rules for high-density screens */
   .navbar__container__fluid {
     /* background: orchid; */
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 420px) {
+  .navbar__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em 2em 5em 1em;
+  }
+
+  .btn-mobile-app {
+    width: 144px;
+    height: 51px;
+    font-size: 12px;
+    display: flex;
+  }
+
+  .demo-button {
+    height: 51px;
+    font-size: 13px;
+  }
+
+  .d-inline-block {
+    height: 30px;
+    width: 180px;
+  }
+  .banner__right > img {
+    height: 400px;
+  }
+  .hidden__on__mobile {
+    display: none;
+  }
+
+  .headers__section__logo {
+    width: 184px;
+  }
+  .header__four {
+    font-size: 1.3em;
+  }
+  span.section__one__section__text {
+    font-size: .9em !important;
+  }
+  .section__text__three {
+    font-size: .9em !important;
+  }
+  .section__text__on__mobile {
+    margin-top: 3em !important;
+  }
+  .carousel-inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .carousel__header {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+  }
+  .dont__get__stucked {
+    font-size: 1.3em !important;
+  }
+  .footer__logo {
+    width: 144px;
+    height: 140px;
   }
 }

@@ -49,7 +49,7 @@ const Header = () => (
           Rita Mobile App
         </a>
         <a
-          className="btn btn-book-demo"
+          className="btn btn-book-demo hidden__on__mobile"
           href="https://calendly.com/johnarts/chat?month=2023-06"
           target="_blank"
         >
@@ -120,7 +120,7 @@ const SectionTwo = () => {
 
   return (
     <section className="section__container section__two">
-      <h4 ref={sectionRef} className="header__four gradient__two">
+      <h4 ref={sectionRef} className="header__four gradient__two section__text__on__mobile">
         Find out which Competitors you are losing customers to and why.
       </h4>
       <div className="section__container__image">
@@ -165,7 +165,7 @@ const SectionThree = () => {
       <div className="section__container__image">
         <img src="assets/section_two.svg" alt="Logo" width="100%" />
       </div>
-      <p className="section__text">
+      <p className="section__text section__text__three">
         Benchmark and outshine competitors by tracking their successful
         strategies
       </p>
@@ -175,7 +175,7 @@ const SectionThree = () => {
 
 const SectionFour = () => (
   <section className="section__container section__text__gradient">
-    <h4 className="header__four"> Don't get stuck in a limited view.</h4>
+    <h4 className="header__four dont__get__stucked"> Don't get stuck in a limited view.</h4>
     <p className="section__text__secondary">
       You have mastered the art of understanding customer behaviour on your own
       website and app, but what <br />
@@ -334,7 +334,7 @@ const FooterSection = () => {
               alt="L'ogo"
               width="30%"
               height="25%"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top footer__logo"
             />
           </a>
           <p className="footer__section__text">Your data in your pocket</p>
@@ -398,7 +398,7 @@ function App() {
       <HeaderSection
         title={`"${`Rita opens up unprecedented levels of online behavioural insight – it’s a gold mine!`}"`}
         subtitle="Nyssa Packard, Senior Director of Insights, Skyscanner"
-        logo={<img src="assets/skyscanner.svg" alt="Logo" width="10%" />}
+        logo={<img src="assets/skyscanner.svg" alt="Logo" width="100%" className="headers__section__logo" />}
       />
       <GetStarted />
       {/* <SectionSeven /> */}
