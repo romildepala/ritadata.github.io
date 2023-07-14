@@ -76,14 +76,7 @@ const Banner = () => (
         <TextInputWithButton />
       </div>
       <div className="banner__right">
-        <video
-          src="assets/animationfile.mp4"
-          width="100%"
-          autoPlay
-          muted
-          loop
-          controls={false}
-        />
+        <img src="assets/animationfile.gif" alt="Logo" width="100%" />
       </div>
     </div>
   </div>
@@ -95,9 +88,7 @@ const HeaderSection = ({ title, subtitle, logo, gradient__one }) => (
     className={`section__container animate__animated animate__fadeIn ${gradient__one}`}
   >
     {/* <p className="section__one__section__text">{title}</p> */}
-    <h4 className="header__four">
-      {title}
-    </h4>
+    <h4 className="header__four">{title}</h4>
     <span className="section__text section__one__section__text">
       {subtitle}
     </span>
@@ -389,7 +380,14 @@ function App() {
       <HeaderSection
         title={`"${`We've gained remarkable insights since working with Rita.`}"`}
         subtitle="Stefan Platteau, Head of Analytics at Hellofresh"
-        logo={<img src="assets/hello_fresh.svg" alt="Logo" width="100%" className="headers__section__logo" />}
+        logo={
+          <img
+            src="assets/hello_fresh.svg"
+            alt="Logo"
+            width="100%"
+            className="headers__section__logo"
+          />
+        }
         gradient__one="gradient__one"
       />
       <SectionTwo />
