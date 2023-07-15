@@ -25,6 +25,9 @@ body {
   display: flex;
   flex-direction: row;
 }
+.header__left__logo {
+  width: 70%;
+}
 .btn-book-demo {
   /* background: #ffdbcb; */
   background: linear-gradient(111.38deg, #ffd5c3 -0.42%, #ffffff 107.17%);
@@ -539,6 +542,27 @@ span.section__one__section__text {
   /* CSS rules for mobile devices */
   .navbar__container__fluid {
   }
+  .navbar__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em 2em 5em 2em;
+  }
+ 
+
+  .header__left {
+    max-width: 60% !important;
+  }
+
+  .header__left__logo {
+    width: 500px !important;
+    height: 60px !important;
+  }
+  
+  .hidden__on__mobile {
+    display: none;
+  }
+
   .banner__container {
     flex-direction: column;
     margin: 0 2em;
@@ -618,13 +642,32 @@ span.section__one__section__text {
   .section__five__section__text {
     font-size: 14px;
   }
-  
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   /* CSS rules for tablets */
   .navbar__container__fluid {
   }
+
+  .navbar__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em 3em 5em 1em;
+  }
+  .banner__container {
+    margin: 0em 2.5em 0em 2.5em;
+  }
+
+  .header__left {
+    max-width: 60% !important;
+  }
+
+  .header__left__logo {
+    width: 500px !important;
+    height: 60px !important;
+  }
+
   .header__three {
     font-size: 2em;
     line-height: 33px;
@@ -715,7 +758,16 @@ span.section__one__section__text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 2em 2em 5em 1em;
+    margin: 2em 1.5em 5em 1em;
+  }
+
+  .header__left {
+    max-width: 60% !important;
+  }
+
+  .header__left__logo {
+    width: 500px !important;
+    height: 60px !important;
   }
 
   .btn-mobile-app {
@@ -748,10 +800,10 @@ span.section__one__section__text {
     font-size: 1.3em;
   }
   span.section__one__section__text {
-    font-size: .9em !important;
+    font-size: 0.9em !important;
   }
   .section__text__three {
-    font-size: .9em !important;
+    font-size: 0.9em !important;
   }
   .section__text__on__mobile {
     margin-top: 3em !important;

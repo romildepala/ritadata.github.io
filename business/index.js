@@ -34,9 +34,9 @@ const Header = () => (
           <img
             src="assets/logo.png"
             alt="Logo"
-            width="70%"
+            width="100%"
             height="20%"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top header__left__logo"
           />
         </a>
       </div>
