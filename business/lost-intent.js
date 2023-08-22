@@ -816,7 +816,7 @@ function App() {
           competitors: { event: "visits", query: competitorsQuery },
           interaction_type: "uniques",
         };
-        const response = await fetch("https://api.ritadata.com/lpi", {
+        const response = await fetch("https://api.ritadata.com/landing-lpi", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
