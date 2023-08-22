@@ -731,7 +731,7 @@ function App() {
   }, [targetWebsite, email]);
 
   React.useEffect(() => {
-    if (competitorWebsites.length) {
+    if (competitorWebsites.length >= 3) {
       mixpanel.track("Landing LPI", {
         email: email,
         target: targetWebsite,
