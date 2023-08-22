@@ -2,7 +2,9 @@ const Header = () => {
   return (
     <header className="header">
       <img src="assets/logo_blue.svg" alt="Logo" className="logo" />
-      <span className="company-name">Rita Data</span>
+      <span className="company-name" style={{ fontFamily: "Telegraf" }}>
+        Rita Data
+      </span>
     </header>
   );
 };
@@ -704,44 +706,11 @@ function App() {
 
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const [lpiData, setLpiData] = React.useState({
-    result: {
-      "2h": {
-        skyscanner: 1043,
-        rome2rio: 1229,
-        kayak: 674,
-      },
-      "6h": {
-        skyscanner: 1181,
-        rome2rio: 1268,
-        kayak: 742,
-      },
-      "12h": {
-        skyscanner: 1246,
-        rome2rio: 1285,
-        kayak: 786,
-      },
-      "1w": {
-        skyscanner: 2101,
-        rome2rio: 1644,
-        kayak: 1269,
-      },
-      "2w": {
-        skyscanner: 2421,
-        rome2rio: 1820,
-        kayak: 1462,
-      },
-      total_visits: 9360,
-    },
-  });
+  const [lpiData, setLpiData] = React.useState();
 
   const [email, setEmail] = React.useState("");
-  const [targetWebsite, setTargetWebsite] = React.useState("booking");
-  const [competitorWebsites, setCompetitorWebsites] = React.useState([
-    "skyscanner",
-    "kayak",
-    "rome2rio",
-  ]);
+  const [targetWebsite, setTargetWebsite] = React.useState();
+  const [competitorWebsites, setCompetitorWebsites] = React.useState();
 
   const [step, setStep] = React.useState(1);
 
