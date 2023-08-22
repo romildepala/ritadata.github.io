@@ -91,7 +91,7 @@ const FirstPage = ({ onSubmit }) => {
   const Form = window.antd.Form;
   const Input = window.antd.Input;
   const Button = window.antd.Button;
-  const { Title, Text } = Typography;
+  const { Title, Text, Link } = Typography;
   const [form] = Form.useForm();
 
   const onFinish = (value) => {
@@ -143,6 +143,20 @@ const FirstPage = ({ onSubmit }) => {
           </Form.Item>
         </div>
       </Form>
+
+      <Text type="secondary" style={{ textAlign: "center", marginBottom: 8 }}>
+        By continuing, you agree with Rita's
+        <br />
+        <Link
+          href="https://ritapersonaldata.com/privacypolicy.html"
+          target="_blank"
+          style={{ color: "#5455e5" }}
+        >
+          Privacy Policy
+        </Link>
+        <br />
+        Copyright © Rita Data B.V.
+      </Text>
     </div>
   );
 };
@@ -435,8 +449,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
           competitor within 2h
         </Title>
         <Text type="secondary" style={{ color: "#64748B", fontSize: 24 }}>
-          You are losing potential customers to your competition. Avoid this by
-          understanding why
+          You are losing potential customers to your competition.
         </Text>
       </header>
 
@@ -552,6 +565,13 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             gap: 48,
           }}
         >
+          <Text
+            type="secondary"
+            style={{ color: "#64748B", fontSize: 24, textAlign: "center" }}
+          >
+            Learn why you are losing customers.
+          </Text>
+
           <Button
             size={"large"}
             style={{ width: "100%", fontWeight: 700 }}
@@ -622,8 +642,8 @@ const CalendlyPage = () => {
         className={"headerText"}
         style={{ justifyContent: "start", marginTop: 56, flexGrow: 0 }}
       >
-        <Title style={{ marginBottom: 0, fontSize: 42 }}>
-          Book a demo to learn more
+        <Title style={{ marginBottom: 0, fontSize: 42, textAlign: "center" }}>
+          Book a demo to find out why customers are going to competitors.
         </Title>
       </header>
 
@@ -729,17 +749,21 @@ function App() {
     true
   );
 
-  React.useEffect(() => {
-    mixpanel.init("9a9432edda95d53541aa76fd98bdb0bb", {
-      // debug: true,
-      // track_pageview: true,
-      persistence: "localStorage",
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   try {
+  //     console.log("here lol");
+  //     mixpanel.init("9a9432edda95d53541aa76fd98bdb0bb", {
+  //       // debug: true,
+  //       // track_pageview: true,
+  //       persistence: "localStorage",
+  //     });
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   }
+  // }, []);
 
   React.useEffect(() => {
     if (email.length) {
-      mixpanel.identify(email);
       mixpanel.track("Landing LPI", { email: email });
     }
   }, [email]);

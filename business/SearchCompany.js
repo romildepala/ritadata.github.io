@@ -1,7 +1,3 @@
-// import {useState, useEffect} from 'react';
-
-// import {Select, Spin, Empty} from 'antd';
-
 function SearchCompanyInput({ onSelectedCompany, ...props }) {
   const Select = window.antd.Select;
   const Spin = window.antd.Spin;
