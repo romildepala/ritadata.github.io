@@ -710,26 +710,13 @@ function App() {
 
   const [email, setEmail] = React.useState("");
   const [targetWebsite, setTargetWebsite] = React.useState();
-  const [competitorWebsites, setCompetitorWebsites] = React.useState();
+  const [competitorWebsites, setCompetitorWebsites] = React.useState([]);
 
   const [step, setStep] = React.useState(1);
 
   const [isFooterButtonDisabled, setIsFooterButtonDisabled] = React.useState(
     true
   );
-
-  // React.useEffect(() => {
-  //   try {
-  //     console.log("here lol");
-  //     mixpanel.init("9a9432edda95d53541aa76fd98bdb0bb", {
-  //       // debug: true,
-  //       // track_pageview: true,
-  //       persistence: "localStorage",
-  //     });
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // }, []);
 
   React.useEffect(() => {
     if (email.length) {
