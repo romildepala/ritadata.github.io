@@ -16,13 +16,23 @@ const useIntersectionObserver = (callback, options) => {
 const TextInputWithButton = () => (
   <div className="input-container animated fadeIn">
     {/* <input type="text" className="text-input" style={{ width: "220px" }} /> */}
-    <a
-      className="demo-button"
-      href="https://calendly.com/johnarts/chat?month=2023-06"
-      target="_blank"
-    >
-      Book a Demo
-    </a>
+    <div style={{ display: "flex" }}>
+      <a
+        className="demo-button"
+        href="https://calendly.com/johnarts/chat?month=2023-06"
+        target="_blank"
+      >
+        Book a Demo
+      </a>
+      <a
+        style={{ marginLeft: 8 }}
+        className="demo-button"
+        href="https://ritapersonaldata.com/business/lost-intent.html"
+        target="_blank"
+      >
+        Try for free →
+      </a>
+    </div>
   </div>
 );
 
@@ -42,18 +52,11 @@ const Header = () => (
       </div>
       <div className="navbar__container__button">
         <a
-          className="btn btn-mobile-app"
-          href="https://ritapersonaldata.com"
-          target="_blank"
-        >
-          Rita Mobile App
-        </a>
-        <a
           className="btn btn-book-demo hidden__on__mobile"
-          href="https://calendly.com/johnarts/chat?month=2023-06"
+          href="https://ritapersonaldata.com/business/lost-intent.html"
           target="_blank"
         >
-          Book a Demo
+          Try for free →
         </a>
       </div>
     </nav>
@@ -120,7 +123,10 @@ const SectionTwo = () => {
 
   return (
     <section className="section__container section__two">
-      <h4 ref={sectionRef} className="header__four gradient__two section__text__on__mobile">
+      <h4
+        ref={sectionRef}
+        className="header__four gradient__two section__text__on__mobile"
+      >
         Find out which Competitors you are losing customers to and why.
       </h4>
       <div className="section__container__image">
@@ -129,6 +135,15 @@ const SectionTwo = () => {
       <p className="section__text">
         Understand customer behaviour outside of your website or app.
       </p>
+
+      <a
+        className="btn btn-book-demo hidden__on__mobile"
+        href="https://ritapersonaldata.com/business/lost-intent.html"
+        target="_blank"
+        style={{ width: "fit-content" }}
+      >
+        Calculate my Lost Purchase Intent
+      </a>
     </section>
   );
 };
@@ -175,7 +190,9 @@ const SectionThree = () => {
 
 const SectionFour = () => (
   <section className="section__container section__text__gradient">
-    <h4 className="header__four dont__get__stucked"> Don't get stuck in a limited view.</h4>
+    <h4 className="header__four dont__get__stucked">
+      Don't get stuck in a limited view.
+    </h4>
     <p className="section__text__secondary">
       You have mastered the art of understanding customer behaviour on your own
       website and app, but what <br />
@@ -306,6 +323,14 @@ const GetStarted = () => {
         >
           Book a Demo
         </a>
+        <a
+          style={{ marginTop: 8 }}
+          className="btn btn-primary btn-book-demo"
+          href="https://ritapersonaldata.com/business/lost-intent.html"
+          target="_blank"
+        >
+          Try for free
+        </a>
       </div>
     </div>
   );
@@ -398,7 +423,14 @@ function App() {
       <HeaderSection
         title={`"${`Rita opens up unprecedented levels of online behavioural insight – it’s a gold mine!`}"`}
         subtitle="Nyssa Packard, Senior Director of Insights, Skyscanner"
-        logo={<img src="assets/skyscanner.svg" alt="Logo" width="100%" className="headers__section__logo" />}
+        logo={
+          <img
+            src="assets/skyscanner.svg"
+            alt="Logo"
+            width="100%"
+            className="headers__section__logo"
+          />
+        }
       />
       <GetStarted />
       {/* <SectionSeven /> */}
