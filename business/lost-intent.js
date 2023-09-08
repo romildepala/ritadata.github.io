@@ -441,11 +441,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             source: {
               x: startX,
               y0: startY,
-              y1:
-                startY +
-                firstBarDim.height *
-                  (company.volume / 100) *
-                  (lostVolume / 100),
+              y1: startY + firstBarDim.height * (company.volume / 100),
             },
             target: {
               x: start2X,
@@ -549,7 +545,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
               gap: 16,
             }}
           >
-            <Title level={4}>{targetWebsite + " Visitors"}</Title>
+            <Title level={4}>Lost Customers</Title>
 
             <div
               id={targetWebsite}
@@ -564,7 +560,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             >
               <div
                 style={{
-                  height: lostVolume + "%",
+                  height: "100%",
                   minHeight: 30 + "%",
                   display: "flex",
                   justifyContent: "center",
