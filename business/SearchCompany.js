@@ -7,7 +7,7 @@ function SearchCompanyInput({ onSelectedCompany, ...props }) {
 
   const [companies, setCompanies] = React.useState(null);
   const [typedText, setTypedText] = React.useState("");
-  const [selectedCompany, setSelectedCompany] = React.useState();
+  const [selectedCompany, setSelectedCompany] = React.useState(null);
 
   const fetchSuggestions = _.debounce(async (typedText) => {
     setIsFetching(true);
@@ -57,6 +57,9 @@ function SearchCompanyInput({ onSelectedCompany, ...props }) {
       onSelect={(newVal) => {
         onSelectedCompany(newVal);
         setSelectedCompany(newVal);
+
+        setSelectedCompany(null);
+        setCompanies(null);
       }}
       notFoundContent={
         isFetching ? (

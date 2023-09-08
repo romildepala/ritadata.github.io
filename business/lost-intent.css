@@ -18,6 +18,24 @@ body {
   height: 100vh;
 }
 
+.mobile-warning {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-warning {
+    display: flex;
+    justify-content: center; /* for horizontal centering */
+    align-items: center; /* for vertical centering */
+    height: 100vh; /* or any other height you want */
+  }
+
+  /* Hide other components when displaying on mobile */
+  .container > *:not(.mobile-warning) {
+    display: none;
+  }
+}
+
 .header,
 .footer {
   height: 100px;

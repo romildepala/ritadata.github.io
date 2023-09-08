@@ -48,7 +48,11 @@ const Footer = ({
               onClickNext();
             }}
           >
-            {step === 6 ? "Restart" : "Next"} →
+            {step === 6
+              ? "Restart →"
+              : step === 4
+              ? "Discover more insights →"
+              : "Next →"}
           </Button>
         </div>
       ) : null}
@@ -363,6 +367,35 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
   const [lostVolume, setLostVolume] = React.useState(0);
   const [competitors, setCompetitors] = React.useState([]);
 
+  const [yPosition, setYPosition] = React.useState(49);
+  const containerRef = React.useRef();
+  const contentRef = React.useRef();
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (contentRef.current && containerRef.current) {
+        // Calculate the y position of content relative to the container
+        const rect = contentRef.current.getBoundingClientRect();
+        const containerRect = containerRef.current.getBoundingClientRect();
+
+        console.log(rect, containerRect);
+        console.log(rect.top - containerRect.top);
+        setYPosition(rect.top - containerRect.top);
+      }
+    };
+
+    // Attach scroll listener to the container
+    if (containerRef.current) {
+      containerRef.current.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
   React.useEffect(() => {
     if (svgRef.current && document.querySelector(`#${targetWebsite}`)) {
       const svgDim = document.querySelector("#lol1").getBoundingClientRect();
@@ -377,6 +410,18 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
         .select(svgRef.current)
         .append("g")
         .attr("id", "linkGroup");
+
+      const dimm = containerRef.current.getBoundingClientRect();
+      console.log(dimm);
+
+      d3.select(svgRef.current)
+        .append("clipPath")
+        .attr("id", "clip-boundary")
+        .append("rect")
+        .attr("x", dimm.x)
+        .attr("y", dimm.y - 20)
+        .attr("width", dimm.width)
+        .attr("height", dimm.height + 36);
 
       const startX = firstBarDim.x + firstBarDim.width - svgDim.x;
       let startY = firstBarDim.y - svgDim.y;
@@ -396,7 +441,11 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             source: {
               x: startX,
               y0: startY,
-              y1: startY + firstBarDim.height * (company.volume / 100),
+              y1:
+                startY +
+                firstBarDim.height *
+                  (company.volume / 100) *
+                  (lostVolume / 100),
             },
             target: {
               x: start2X,
@@ -407,13 +456,17 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
 
           const path = sankeyLinkPath(link);
 
-          linkGroup.append("path").attr("d", path).attr("fill", "#6366F126");
+          linkGroup
+            .append("path")
+            .attr("d", path)
+            .attr("clip-path", "url(#clip-boundary)")
+            .attr("fill", "rgb(244, 63, 94, 0.15)");
 
           startY = link.source.y1;
         }
       });
     }
-  }, [svgRef, competitors]);
+  }, [svgRef, competitors, lostVolume, yPosition]);
 
   React.useEffect(() => {
     if (lpiData && lpiData["result"]) {
@@ -448,7 +501,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
         <Title style={{ marginBottom: 0, fontSize: 42 }}>
           <span style={{ color: "#f43f5e" }}>{lostVolume}%</span> of website
           visitors are <span style={{ color: "#f43f5e" }}>lost</span> to a
-          competitor within 2h
+          competitor within 2 hours
         </Title>
         <Text type="secondary" style={{ color: "#64748B", fontSize: 24 }}>
           You are losing potential customers to your competition.
@@ -471,6 +524,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
         }}
       >
         <div
+          ref={containerRef}
           style={{
             flex: "0 0 66.66%",
             border: "solid",
@@ -479,6 +533,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             borderColor: "#e5e7eb",
             height: "100%",
             boxSizing: "border-box",
+            overflow: "auto",
             display: "flex",
             alignItems: "start",
             gap: "66%",
@@ -499,14 +554,29 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             <div
               id={targetWebsite}
               style={{
-                width: 40,
+                width: 60,
                 height: "100%",
-                backgroundColor: "#8B5CF6",
+                minHeight: 200,
+                backgroundColor: "#F43F5E",
                 borderRadius: 4,
+                color: "white",
               }}
-            ></div>
+            >
+              <div
+                style={{
+                  height: lostVolume + "%",
+                  minHeight: 30 + "%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <span>{lostVolume}%</span>
+              </div>
+            </div>
           </div>
           <div
+            ref={contentRef}
             style={{
               height: "100%",
               display: "flex",
@@ -515,9 +585,9 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             }}
           >
             <Title level={4}>Competitors Lost To</Title>
-            {competitors.map((competitor) => {
+            {competitors.map((competitor, i) => {
               return (
-                <>
+                <div key={i}>
                   <div key={competitor.website}>
                     <span
                       key={competitor.website}
@@ -533,7 +603,8 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
                       key={competitor.website}
                       style={{
                         color: "#ADAFAA",
-                        fontSize: 12,
+                        fontSize: 14,
+                        fontWeight: 600,
                       }}
                     >
                       {competitor.website}
@@ -545,14 +616,15 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
                     style={{
                       width: 40,
                       height: competitor.volume + "%",
+                      minHeight: 80,
                       backgroundColor: "rgb(247, 247, 254)",
                       borderRadius: "4px",
                       borderWidth: "2px",
                       borderStyle: "solid",
-                      borderColor: "#8B5CF6",
+                      borderColor: "rgb(244, 63, 94)",
                     }}
                   ></div>
-                </>
+                </div>
               );
             })}
           </div>
@@ -567,12 +639,21 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
             gap: 48,
           }}
         >
-          <Text
-            type="secondary"
-            style={{ color: "#64748B", fontSize: 24, textAlign: "center" }}
-          >
-            Learn why you are losing customers.
-          </Text>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <Text
+              type="secondary"
+              style={{ color: "#64748B", fontSize: 28, textAlign: "center" }}
+            >
+              What's next?
+            </Text>
+
+            <Text
+              type="secondary"
+              style={{ color: "#64748B", fontSize: 20, textAlign: "center" }}
+            >
+              Learn why you are losing customers.
+            </Text>
+          </div>
 
           <Button
             size={"large"}
@@ -645,7 +726,7 @@ const CalendlyPage = () => {
         style={{ justifyContent: "start", marginTop: 56, flexGrow: 0 }}
       >
         <Title style={{ marginBottom: 0, fontSize: 42, textAlign: "center" }}>
-          Book a demo to find out why customers are going to competitors.
+          Unlock more behavioural insights. Let’s connect.
         </Title>
       </header>
 
@@ -702,14 +783,27 @@ const LastPage = () => {
 function App() {
   const Spin = window.antd.Spin;
   const message = window.antd.message;
+  const Empty = window.antd.Empty;
+
   const [messageApi, contextHolder] = message.useMessage();
 
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const [lpiData, setLpiData] = React.useState();
+  const [lpiData, setLpiData] = React.useState({
+    result: {
+      "2h": {
+        lastminute: 591,
+        booking: 1235,
+        rome2rio: 387,
+        expedia: 619,
+        kayak: 871,
+      },
+      total_visits: 6108,
+    },
+  });
 
   const [email, setEmail] = React.useState("");
-  const [targetWebsite, setTargetWebsite] = React.useState();
+  const [targetWebsite, setTargetWebsite] = React.useState("skyscanner");
   const [competitorWebsites, setCompetitorWebsites] = React.useState([]);
 
   const [step, setStep] = React.useState(1);
@@ -809,6 +903,20 @@ function App() {
 
   return (
     <div className="container">
+      <div className="mobile-warning">
+        <Empty
+          image={
+            "https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+          }
+          description={
+            <div style={{ fontSize: 16 }}>
+              This web app is not optimized for mobile. Please proceed with a
+              laptop or desktop to go further.
+            </div>
+          }
+        />
+      </div>
+
       {contextHolder}
       <Header />
 
