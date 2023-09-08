@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Telegraf";
-  src: url("/assets/fonts/PPTelegraf-Regular.otf") format("opentype");
+  src: url("/static/fonts/PPTelegraf-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
