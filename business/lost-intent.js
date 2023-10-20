@@ -14,12 +14,14 @@ const Header = () => {
         />
       </Link>
 
-      <span
-        className="company-name"
-        style={{ fontFamily: "Telegraf", cursor: "pointer" }}
-      >
-        Rita Data
-      </span>
+      <Link href="https://ritapersonaldata.com/business/" target="_blank">
+        <span
+          className="company-name"
+          style={{ fontFamily: "Telegraf", cursor: "pointer" }}
+        >
+          Rita Data
+        </span>
+      </Link>
     </header>
   );
 };
