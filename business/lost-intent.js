@@ -1,10 +1,27 @@
 const Header = () => {
+  const Typography = window.antd.Typography;
+
+  const { Title, Text, Link } = Typography;
+
   return (
     <header className="header">
-      <img src="assets/logo_blue.svg" alt="Logo" className="logo" />
-      <span className="company-name" style={{ fontFamily: "Telegraf" }}>
-        Rita Data
-      </span>
+      <Link href="https://ritapersonaldata.com/business/" target="_blank">
+        <img
+          src="assets/logo_blue.svg"
+          alt="Logo"
+          className="logo"
+          style={{ cursor: "pointer" }}
+        />
+      </Link>
+
+      <Link href="https://ritapersonaldata.com/business/" target="_blank">
+        <span
+          className="company-name"
+          style={{ fontFamily: "Telegraf", cursor: "pointer" }}
+        >
+          Rita Data
+        </span>
+      </Link>
     </header>
   );
 };
@@ -29,15 +46,17 @@ const Footer = ({
       </Text>
       {shouldIncludeButtons ? (
         <div style={{ display: "flex", gap: 16 }}>
-          <Button
-            type={"secondary"}
-            size={"large"}
-            onClick={() => {
-              onClickPrev();
-            }}
-          >
-            ← Back
-          </Button>
+          {!isLoading && step >= 3 ? (
+            <Button
+              type={"secondary"}
+              size={"large"}
+              onClick={() => {
+                onClickPrev();
+              }}
+            >
+              ← Back
+            </Button>
+          ) : null}
           <Button
             disabled={isNextDisabled}
             size={"large"}
@@ -167,7 +186,7 @@ const FirstPage = ({ onSubmit }) => {
   );
 };
 
-const GlobeSvg = () => {
+const GlobeSvg = ({ color }) => {
   return (
     <svg
       width="12"
@@ -180,19 +199,19 @@ const GlobeSvg = () => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5ZM0.5 6C0.5 2.96243 2.96243 0.5 6 0.5C9.03757 0.5 11.5 2.96243 11.5 6C11.5 9.03757 9.03757 11.5 6 11.5C2.96243 11.5 0.5 9.03757 0.5 6Z"
-        fill="#8B5CF6"
+        fill={color ? color : "#8B5CF6"}
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M0.5 6C0.5 5.72386 0.723858 5.5 1 5.5H11C11.2761 5.5 11.5 5.72386 11.5 6C11.5 6.27614 11.2761 6.5 11 6.5H1C0.723858 6.5 0.5 6.27614 0.5 6Z"
-        fill="#8B5CF6"
+        fill={color ? color : "#8B5CF6"}
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M4.50012 6.00005C4.53438 7.53747 5.06313 9.01763 6 10.2247C6.93687 9.01763 7.46562 7.53747 7.49988 6.00005C7.46562 4.46263 6.93687 2.98248 6 1.77545C5.06313 2.98248 4.53438 4.46263 4.50012 6.00005ZM6 1.00005L5.63083 0.662842C4.29845 2.12151 3.54126 4.01448 3.50011 5.98964C3.49996 5.99658 3.49996 6.00353 3.50011 6.01047C3.54126 7.98563 4.29845 9.8786 5.63083 11.3373C5.72556 11.441 5.85954 11.5001 6 11.5001C6.14046 11.5001 6.27444 11.441 6.36917 11.3373C7.70155 9.8786 8.45874 7.98563 8.49989 6.01047C8.50004 6.00353 8.50004 5.99658 8.49989 5.98964C8.45874 4.01448 7.70155 2.12151 6.36917 0.662842L6 1.00005Z"
-        fill="#8B5CF6"
+        fill={color ? color : "#8B5CF6"}
       />
     </svg>
   );
@@ -212,6 +231,41 @@ const XMarkIcon = () => {
   );
 };
 
+const CompanyBox2 = ({ name, isSelected, onSelect }) => {
+  const Button = window.antd.Button;
+
+  // const [isSelected, setIsSelected] = React.useState(false);
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "between",
+        alignItems: "center",
+        padding: 8,
+        width: "fit-content",
+        border: "solid",
+        borderWidth: 1,
+        borderRadius: 8,
+        borderColor: "#e5e7eb",
+        position: "relative",
+        cursor: "pointer",
+        backgroundColor: isSelected ? "#8B5CF6" : "white",
+      }}
+      className={"company-box"}
+      onClick={() => {
+        onSelect();
+        // setIsSelected((prev) => !prev);
+      }}
+    >
+      <GlobeSvg color={isSelected ? "white" : null} />
+
+      <span style={{ marginLeft: 8, color: isSelected ? "white" : "black" }}>
+        {name}
+      </span>
+    </div>
+  );
+};
+
 const CompanyBox = ({ name, onRemove }) => {
   const Button = window.antd.Button;
 
@@ -228,12 +282,13 @@ const CompanyBox = ({ name, onRemove }) => {
         borderRadius: 8,
         borderColor: "#e5e7eb",
         position: "relative",
+        backgroundColor: "#8B5CF6",
       }}
       className={"company-box"}
     >
-      <GlobeSvg />
+      <GlobeSvg color={"white"} />
 
-      <span style={{ marginLeft: 8 }}>{name}</span>
+      <span style={{ marginLeft: 8, color: "white" }}>{name}</span>
 
       <Button
         className={"x-button"}
@@ -260,8 +315,9 @@ const SecondPage = ({ onCompanySelect, onRemove }) => {
 
   const [selectedCompany, setSelectedCompany] = React.useState(null);
 
+  const [selectedOffer, setSelectedOffer] = React.useState(null);
   return (
-    <div className="page1">
+    <div className="page1" style={{ overflow: "scroll", padding: "16px 0px" }}>
       <header className={"headerText"}>
         <Title style={{ marginBottom: 0, fontSize: 42 }}>
           Tell us about your company.
@@ -282,25 +338,82 @@ const SecondPage = ({ onCompanySelect, onRemove }) => {
         />
       ) : null}
 
-      <div className="form">
+      <div className="form" style={{ flexGrow: 0, minHeight: 40 }}>
         <SearchCompanyInput
           size={"large"}
           style={{ width: "20%" }}
           onSelectedCompany={(website) => {
             onCompanySelect(website);
+            setSelectedOffer(null);
             setSelectedCompany(website);
           }}
         />
+      </div>
+
+      <div className={"headerText"} style={{ justifyContent: "start" }}>
+        <Text type="secondary" style={{ color: "#64748B", fontSize: 24 }}>
+          Or choose an example...
+        </Text>
+
+        <div style={{ display: "flex", flexDirection: "row", gap: "16px" }}>
+          <CompanyBox2
+            name={"tesco"}
+            isSelected={selectedOffer === "tesco"}
+            onSelect={() => {
+              setSelectedCompany(null);
+              onCompanySelect("tesco");
+              setSelectedOffer("tesco");
+            }}
+          />
+          <CompanyBox2
+            name={"nike"}
+            isSelected={selectedOffer === "nike"}
+            onSelect={() => {
+              setSelectedCompany(null);
+
+              onCompanySelect("nike");
+              setSelectedOffer("nike");
+            }}
+          />
+          <CompanyBox2
+            name={"netflix"}
+            isSelected={selectedOffer === "netflix"}
+            onSelect={() => {
+              setSelectedCompany(null);
+
+              onCompanySelect("netflix");
+              setSelectedOffer("netflix");
+            }}
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-const ThirdPage = ({ onCompanySelect, onRemove }) => {
+const ThirdPage = ({
+  targetWebsite,
+  onCompanySelect,
+  onRemove,
+  onMultipleCompanySelect,
+}) => {
   const Typography = window.antd.Typography;
   const { Title, Text } = Typography;
 
   const [selectedCompanies, setSelectedCompanies] = React.useState([]);
+
+  React.useEffect(() => {
+    if (targetWebsite === "tesco") {
+      onMultipleCompanySelect(["sainsburys", "waitrose", "ocado"]);
+      setSelectedCompanies(["sainsburys", "waitrose", "ocado"]);
+    } else if (targetWebsite === "nike") {
+      onMultipleCompanySelect(["adidas", "puma", "newbalance"]);
+      setSelectedCompanies(["adidas", "puma", "newbalance"]);
+    } else if (targetWebsite === "netflix") {
+      onMultipleCompanySelect(["primevideo", "disneyplus", "hbo"]);
+      setSelectedCompanies(["primevideo", "disneyplus", "hbo"]);
+    }
+  }, [targetWebsite]);
 
   return (
     <div className="page1">
@@ -368,8 +481,11 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
   const [competitors, setCompetitors] = React.useState([]);
 
   const [yPosition, setYPosition] = React.useState(49);
+  const [pageYPosition, setPageYPosition] = React.useState(0);
   const containerRef = React.useRef();
   const contentRef = React.useRef();
+
+  const pageRef = React.useRef();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -378,8 +494,8 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
         const rect = contentRef.current.getBoundingClientRect();
         const containerRect = containerRef.current.getBoundingClientRect();
 
-        console.log(rect, containerRect);
-        console.log(rect.top - containerRect.top);
+        // console.log(rect, containerRect);
+        // console.log(rect.top - containerRect.top);
         setYPosition(rect.top - containerRect.top);
       }
     };
@@ -397,6 +513,26 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
   }, []);
 
   React.useEffect(() => {
+    const handleScroll = () => {
+      if (pageRef.current) {
+        const rect = pageRef.current.scrollTop;
+        setPageYPosition(rect);
+      }
+    };
+
+    // Attach scroll listener to the container
+    if (pageRef.current) {
+      pageRef.current.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (pageRef.current) {
+        pageRef.current.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, [pageRef]);
+
+  React.useEffect(() => {
     if (svgRef.current && document.querySelector(`#${targetWebsite}`)) {
       const svgDim = document.querySelector("#lol1").getBoundingClientRect();
 
@@ -405,6 +541,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
         .getBoundingClientRect();
 
       d3.select("#linkGroup").remove();
+      d3.select("#clip-boundary").remove();
 
       const linkGroup = d3
         .select(svgRef.current)
@@ -412,16 +549,15 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
         .attr("id", "linkGroup");
 
       const dimm = containerRef.current.getBoundingClientRect();
-      console.log(dimm);
 
       d3.select(svgRef.current)
         .append("clipPath")
         .attr("id", "clip-boundary")
         .append("rect")
         .attr("x", dimm.x)
-        .attr("y", dimm.y - 20)
+        .attr("y", dimm.y + pageYPosition)
         .attr("width", dimm.width)
-        .attr("height", dimm.height + 36);
+        .attr("height", dimm.height - pageYPosition);
 
       const startX = firstBarDim.x + firstBarDim.width - svgDim.x;
       let startY = firstBarDim.y - svgDim.y;
@@ -462,7 +598,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
         }
       });
     }
-  }, [svgRef, competitors, lostVolume, yPosition]);
+  }, [svgRef, competitors, lostVolume, yPosition, pageYPosition]);
 
   React.useEffect(() => {
     if (lpiData && lpiData["result"]) {
@@ -510,7 +646,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
           flexGrow: 1,
           width: "100%",
 
-          overflowX: "scroll",
+          overflow: "scroll",
           justifyContent: "flex-start",
           alignItems: "flex-start",
           flexDirection: "row",
@@ -518,6 +654,7 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
           padding: 48,
           paddingTop: 16,
         }}
+        ref={pageRef}
       >
         <div
           ref={containerRef}
@@ -699,15 +836,21 @@ const LPIPage = ({ lpiData, targetWebsite, onClickNext }) => {
   );
 };
 
-const CalendlyPage = () => {
+const CalendlyPage = ({ shouldShow }) => {
   const Typography = window.antd.Typography;
-  const Button = window.antd.Button;
+  const Spin = window.antd.Spin;
+  const { Title } = Typography;
 
-  const { Title, Text } = Typography;
+  const [loaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    setLoaded(shouldShow);
+  }, [shouldShow]);
 
   React.useEffect(() => {
     const head = document.querySelector("head");
     const script = document.createElement("script");
+
     script.setAttribute(
       "src",
       "https://assets.calendly.com/assets/external/widget.js"
@@ -716,10 +859,20 @@ const CalendlyPage = () => {
   }, []);
 
   return (
-    <div className="page1">
+    <div
+      className="page1"
+      style={
+        loaded ? { display: "block", marginBottom: 48 } : { display: "none" }
+      }
+    >
       <header
         className={"headerText"}
-        style={{ justifyContent: "start", marginTop: 56, flexGrow: 0 }}
+        style={{
+          justifyContent: "start",
+          marginTop: 56,
+          flexGrow: 0,
+          display: "block",
+        }}
       >
         <Title style={{ marginBottom: 0, fontSize: 42, textAlign: "center" }}>
           Unlock more behavioural insights. Let’s connect.
@@ -731,6 +884,7 @@ const CalendlyPage = () => {
           display: "flex",
           flexGrow: 1,
           width: "100%",
+          height: "100%",
 
           justifyContent: "center",
           alignItems: "center",
@@ -744,13 +898,12 @@ const CalendlyPage = () => {
           className="calendly-inline-widget"
           id={"calendly-inline-widget"}
           data-url="https://calendly.com/johnarts/rita-data-demo"
-          style={{ minWidth: 320, height: "100%", width: "100%" }}
-        ></div>
-        <script
-          type="text/javascript"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          async
-        ></script>
+          style={{
+            minWidth: 320,
+            height: "100%",
+            width: "100%",
+          }}
+        />
       </div>
     </div>
   );
@@ -948,6 +1101,12 @@ function App() {
 
           {step === 3 ? (
             <ThirdPage
+              targetWebsite={targetWebsite}
+              onMultipleCompanySelect={(websites) => {
+                setTimeout(() => {
+                  setCompetitorWebsites(websites);
+                }, 1000);
+              }}
               onCompanySelect={(website) => {
                 setCompetitorWebsites((prev) => [...prev, website]);
               }}
@@ -969,7 +1128,7 @@ function App() {
             />
           ) : null}
 
-          {step === 5 ? <CalendlyPage /> : null}
+          <CalendlyPage shouldShow={step == 5} />
 
           {step === 6 ? <LastPage /> : null}
         </main>
