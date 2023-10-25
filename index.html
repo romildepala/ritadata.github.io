@@ -65,6 +65,17 @@
             : (window.sa_event.q = [a]);
         };
     </script>
+    <script>
+      window.sa_event =
+        window.sa_event ||
+        function () {
+          var a = [].slice.call(arguments);
+          window.sa_event.q
+            ? window.sa_event.q.push(a)
+            : (window.sa_event.q = [a]);
+        };
+    </script>
+
     <title>Rita - It's your data, own it.</title>
   </head>
 
@@ -341,7 +352,7 @@
     </section>
 
     <section class="testimonial-sections">
-      <div class="testimonial-sections-header">
+      <div class="testimonial-sections-header" style="z-index: 1">
         <p
           data-aos="fade-fade-in"
           data-aos-duration="700"
@@ -1115,5 +1126,35 @@
       });
     </script>
     <!-- Typing Text Effect Ends Here -->
+    <script>
+      !(function (e, t, n, s, u, a) {
+        e.twq ||
+          ((s = e.twq = function () {
+            s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+          }),
+          (s.version = "1.1"),
+          (s.queue = []),
+          (u = t.createElement(n)),
+          (u.async = !0),
+          (u.src = "//static.ads-twitter.com/uwt.js"),
+          (a = t.getElementsByTagName(n)[0]),
+          a.parentNode.insertBefore(u, a));
+      })(window, document, "script");
+      // Insert Twitter Pixel ID and Standard Event data below
+      twq("init", "o5wmg");
+      twq("track", "PageView");
+    </script>
+    <!-- 100% privacy friendly analytics -->
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+    /></noscript>
   </body>
 </html>
