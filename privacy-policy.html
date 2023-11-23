@@ -331,40 +331,6 @@
             <p>Privacy-by-design</p>
           </a>
 
-          <a href="#personal" class="privacy-button">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16L21 8V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21Z"
-                stroke="#FAF7F0"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17 21V13H7V21"
-                stroke="#FAF7F0"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M7 3V8H15"
-                stroke="#FAF7F0"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <img src="static/images/save.svg" />
-            <p>What personal data does Rita store?</p>
-          </a>
-
           <a href="#children" class="privacy-button">
             <svg
               width="24"
@@ -1265,51 +1231,6 @@
               </div>
             </div>
 
-            <div id="personal" class="policy-details-content">
-              <div class="policy-details-content-heading">
-                <img src="static/images/shield.svg" />
-                <h1>What personal data does Rita store?</h1>
-              </div>
-              <div class="policy-details-content-body">
-                <p>
-                  Private is private. We honestly care about your privacy. Rita
-                  App is designed with maximum protection of your privacy in
-                  mind. Here is how:
-                </p>
-                <ul class="policy-terms">
-                  <li>
-                    <img src="static/images/Rectangle 31.svg" />
-                    <p>
-                      Your personal data is stored on your device by default.
-                    </p>
-                  </li>
-
-                  <li>
-                    <img src="static/images/Rectangle 31.svg" />
-                    <p>
-                      Independent specialists were consulted to give feedback on
-                      the design of our systems. When designing and throughout
-                      development.
-                    </p>
-                  </li>
-
-                  <li>
-                    <img src="static/images/Rectangle 31.svg" />
-                    <p>The data you collect is encrypted.</p>
-                  </li>
-
-                  <li>
-                    <img src="static/images/Rectangle 31.svg" />
-                    <p>
-                      Our foundational principles of Privacy by design were
-                      regularly consulted when developing the App and making
-                      architectural choices.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
             <div id="children" class="policy-details-content">
               <div class="policy-details-content-heading">
                 <img src="static/images/Children.svg" />
@@ -1714,7 +1635,7 @@
     <script>
       const currentYear = new Date().getFullYear();
       const copyrightNotice = document.getElementById("copyright");
-      copyrightNotice.textContent = `© Rita Data BV ${currentYear} • VJacob Van Lennepkade 21H, 1054ZE Amsterdam, The Netherlands.`;
+      copyrightNotice.textContent = `© Rita Data BV ${currentYear} • VJacob Van Lennepkade 21H, 1054ZE Amsterdam, The Netherlands. Kvk nr: 85293776`;
 
       // Get Active Privacy Terms
       let privacyLinks = document.querySelectorAll(
