@@ -76,7 +76,7 @@ const Banner = () => (
         <TextInputWithButton />
       </div>
       <div className="banner__right">
-        <img src="assets/animationfile.gif" alt="Logo" width="100%" />
+        <img src="assets/newanimationfile.gif" alt="Logo" width="100%" />
       </div>
     </div>
   </div>
