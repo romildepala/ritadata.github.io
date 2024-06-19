@@ -366,7 +366,7 @@ const FooterSection = () => {
       </div>
       <div className="separator"></div>
       <div className="copyright__container">
-        <p className="footer__section__text">&copy; Rita Data BV 2023</p>
+        <p className="footer__section__text">&copy; Rita Personal Data Holdings BV 2024</p>
       </div>
     </div>
   );
