@@ -366,7 +366,7 @@ const FooterSection = () => {
       </div>
       <div className="separator"></div>
       <div className="copyright__container">
-        <p className="footer__section__text">&copy; Rita Personal Data Holdings BV 2024</p>
+        <p className="footer__section__text">© Betty Personal Data Holdings Ltd 2024 • 3rd Floor, 86-90 Paul Street, London, EC2A 4NE. Company number: 15804560</p>
       </div>
     </div>
   );
