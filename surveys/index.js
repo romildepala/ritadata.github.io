@@ -29,9 +29,8 @@ const Header = () => {
           Sondaggio per i proprietari di animali domestici <br/>
         </h1>
         <p>
-       Si prega di leggere attentamente le istruzioni contenute nel sondaggio per completare l'attività per intero. Attività adatta agli utenti Gmail che verrà richiesta. Il sondaggio è in italiano.
+       Si prega di leggere attentamente le istruzioni contenute nel sondaggio per completare l'attività per intero. Richiede un account Google. Il sondaggio è in italiano.
         </p>
-
         <div className="input__section">
           <div className="input-container animated fadeIn">
             <a className="demo-button" href="#" onClick={handleJoinBetaClick}>
