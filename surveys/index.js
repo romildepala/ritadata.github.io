@@ -26,24 +26,17 @@ const Header = () => {
       </div>
       <div className="content__section" style={{marginBottom: 100}}>
         <h1>
-          Exclusive Task for Cat/Dog owners only (Pet food preferences):<br/> Survey + Product testing
+          Sondaggio per i proprietari di animali domestici <br/>
         </h1>
         <p>
-        <span style={{fontWeight: 'bold'}}>Please read the instructions in the survey carefully</span> to complete the task in full.
-        <br/>
-        Task suitable for Gmail users which will be requested. Survey is in Italian.
-        <br/>
-        <span style={{fontWeight: 'bold'}}>The task:</span> Start the Survey and read the instructions, install and test the app, Upload your Google data, Complete the pet survey, Get rewarded if all step are completed successfully.
-        <br/>
-        <span style={{fontWeight: 'bold'}}>Study objective:</span> Our research is to see if there are correlations between your pet food purchasing behaviour and your online activity. 
-        <br/>
-        <span style={{fontWeight: 'bold'}}>Rewards:</span> Completed Tasks will be manually reviewed, ensuring full completion. Rewards will be manually processed and added to your Rita wallet.
+       Si prega di leggere attentamente le istruzioni contenute nel sondaggio per completare l'attività per intero. Attività adatta agli utenti Gmail che verrà richiesta. Il sondaggio è in italiano.
         </p>
 
         <div className="input__section">
           <div className="input-container animated fadeIn">
             <a className="demo-button" href="#" onClick={handleJoinBetaClick}>
-              Start Survey
+              Inizia il Sondaggio
+
             </a>
           </div>
         </div>
